@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>September Meetup</title>
+<meta name="description" content="Spatial Range Queries using Python In-Memory IndicesAlexander Müller">
+<!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+<link rel="canonical" href="http://0.0.0.0:4000/2017/09/20/september-meetup.html">
+<link rel="stylesheet" href="/css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="PyData Berlin" href="http://0.0.0.0:4000/feed.xml">
+
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="/index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/code-of-conduct/en">Code of Conduct</a></li>
+<li class="subMenu"><a>Conferences</a>
+<ul>
+<li><a href=/conferences/conf2014.html>PyData Berlin 2014</a></li>
+<li><a href=/conferences/conf2015.html>PyData Berlin 2015</a></li>
+<li><a href=/conferences/conf2016.html>PyData Berlin 2016</a></li>
+<li><a href=/conferences/conf2017.html>PyData Berlin 2017</a></li>
+<li><a href=/conferences/conf2018.html>PyData Berlin 2018</a></li>
+<li><a href="https://de.pycon.org"><span style="font-weight: bold;">PyData Berlin 2019</span></a></li>
+</ul>
+</li>
+<li><a href="/blog/">Posts</a></li>
+<li><a href="/feed.xml" class="icon fa-rss"> RSS Feed</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<article id="main">
+<header>
+<h2>September Meetup</h2>
+<div class="page-description"><p><strong>Alexander Müller</strong> on <em>Spatial Range Queries Using Python In-Memory Indices</em><br />
+<strong><a href="https://www.linkedin.com/in/eduardopeire/">Eduardo Peire</a></strong> on <em>Using Machine Learning in Python to diagnose Malaria</em>.<br />
+Thank you to <a href="https://www.wooga.com">Wooga</a> for hosting.</p>
+</div>
+</header>
+<section class="wrapper style5">
+<div class="inner">
+<h3 id="spatial-range-queries-using-python-in-memory-indices">Spatial Range Queries using Python In-Memory Indices</h3>
+<h4 id="alexander-müller">Alexander Müller</h4>
+<p>When you’re working with a spatial dataset a common use case is that you need to get points of interests that are within a certain radius of a reference point, also know as spatial range queries. A standard solution for this problem is to use databases like MongoDB or Postgres which provided advanced spatial indexing capabilities. However, if you don’t have those capabilities available or you need to perform millions of queries and don’t want to add load to your production database, you need to explore other alternatives.</p>
+<p>Thus, this talk will discuss a potential remedy for this problem by showing how to use python together with some available libraries (<code class="highlighter-rouge">numpy</code>, <code class="highlighter-rouge">sklearn</code>, <code class="highlighter-rouge">rtree</code>, <code class="highlighter-rouge">geohash</code>) to enable in-memory radius searches. We will dive into some implementation details and show which methods to use for which use cases, by benchmarking them against each other.</p>
+<div class="embed-wrapper-16x9"><iframe class="embed-innder" src="//www.youtube.com/embed/_95bSEqMzUA" frameborder="0" allowfullscreen=""></iframe></div>
+<p>About the Speaker: <em>Alex started his career at SAP in Walldorf where he was working for the predictive maintenance team. After pursuing his Masters degree in Data &amp; Web Science at the University of Mannheim, Alex moved to Berlin to join MiNODES a leading Brick-and-Mortar Retail Analytics Startup. There he helped the company building its wifi positioning platform and is now responsible as the Lead Data Scientist to develop new data and predictive products.</em></p>
+<p><em>In his position as a founder of Hackerstolz - one of the biggest non-profit hackathon hosts in Germany-, Alex is also the co-creator of food{hacks} and mobility{hacks}.</em></p>
+<h3 id="using-machine-learning-in-python-to-diagnose-malaria">Using Machine Learning in Python to diagnose Malaria</h3>
+<h4 id="eduardo-peire">Eduardo Peire</h4>
+<p>Malaria is a worldwide disease killing between 500.000 and 800.00 people every year. It affects lots of countries and spreads quickly.</p>
+<p>Until now, malaria is diagnosed either with paper stripes or, the most common and accurate method, visual inspection through a microscope. But there are new technologies to solve this problem, such as Computer Vision and machine learning.</p>
+<div class="embed-wrapper-16x9"><iframe class="embed-innder" src="//www.youtube.com/embed/ZX7HUJPfdlU" frameborder="0" allowfullscreen=""></iframe></div>
+<p>About the Speaker: <em>Eduardo Peire is an engineer from Barcelona who developed a device under 50€, he will explain how it’s device is able to diagnose malaria from a blood drop with Convolutional Neural Networks using <code class="highlighter-rouge">keras</code> on the top of <code class="highlighter-rouge">tensorflow</code>.</em></p>
+</div>
+</section>
+</article>
+
+<footer id="footer">
+<ul class="icons">
+<li><a target="_blank" href="https://twitter.com/pydataberlin" class="brand fa-twitter-square"><span class="label">twitter-square</span></a></li>
+<li><a target="_blank" href="https://github.com/pydataberlin" class="brand fa-github"><span class="label">github</span></a></li>
+<li><a target="_blank" href="https://linkedin.com/company/pydata-berlin" class="brand fa-linkedin"><span class="label">linkedin</span></a></li>
+<li><a target="_blank" href="https://www.facebook.com/pydataberlin/" class="brand fa-facebook-square"><span class="label">facebook-square</span></a></li>
+<li><a target="_blank" href="https://www.flickr.com/photos/pydata/albums" class="brand fa-flickr"><span class="label">flickr</span></a></li>
+<li><a target="_blank" href="https://youtube.com/PyDataTV/" class="brand fa-youtube-square"><span class="label">youtube-square</span></a></li>
+</ul>
+<ul class="copyright">
+<li>&copy;
+2014,
+2019
+PyData Berlin</li>
+<li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+<li>Built with: <a href="http://jekyllrb.com" target="_blank">Jekyll</a></li>
+</ul>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.scrollex.min.js"></script>
+<script src="/js/jquery.scrolly.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/util.js"></script>
+<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+<script src="/js/main.js"></script>
+</div>
+</body>
+</html>

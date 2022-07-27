@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PyData Berlin</title>
+    <description>A community of users and  
+developers of the python  
+scientific stack in Berlin.
+</description>
+    <link>http://0.0.0.0:4000/</link>
+    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 19 Mar 2019 01:36:59 -0500</pubDate>
+    <lastBuildDate>Tue, 19 Mar 2019 01:36:59 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>November Meetup</title>
+        <description>&lt;h3 id=&quot;gradient-boosting-in-practice-a-deep-dive-into-xgboost&quot;&gt;Gradient boosting in practice: a deep dive into xgboost&lt;/h3&gt;
+&lt;h4 id=&quot;jaroslaw-szymczak&quot;&gt;Jaroslaw Szymczak&lt;/h4&gt;
+
+&lt;p&gt;From variety of classification and regression methods, gradient boosting, and in particular its variation in xgboost implementation, is one of the most convenient to use. Out of the box you can use it as easily as random forest. Due to its nature, when used with decision trees, you don’t need to worry about co-linearities or missing values. No more worrying about normalization, standardization nor any other monotonic transformations on your data. Overfitting prevention with watchlists. Written efficiently in C++ with Python and R bindings and scikit-learn like interface. In this talk we will go deep into how and why xgboost works, why it is present in so many winning Kaggle solutions, what is the meaning of its parameters, how to tune them and how to use it in practice.&lt;/p&gt;
+
+&lt;div class=&quot;embed-wrapper-16x9&quot;&gt;&lt;iframe class=&quot;embed-innder&quot; src=&quot;//www.youtube.com/embed/s3VmuVPfu0s&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;About the Speaker: &lt;em&gt;Jaroslaw is a Machine Learning Scientist in OLX Tech Hub Berlin. He has background in analytics and predictive models creation for finance institutions, FMCG and Telecom companies. Currently he is specializing in applying machine learning to detection of unwanted content on OLX classifieds sites across the globe.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Nov 2017 00:00:00 -0600</pubDate>
+        <link>http://0.0.0.0:4000/2017/11/15/november_meetup.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/11/15/november_meetup.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>October Meetup</title>
+        <description>&lt;h3 id=&quot;using-transfer-learningcnn-to-translate-american-sign-language-alphabets-from-video-to-text&quot;&gt;Using Transfer Learning/CNN to translate American Sign Language Alphabets from video to text.&lt;/h3&gt;
+&lt;h4 id=&quot;belal-chaudary&quot;&gt;Belal Chaudary&lt;/h4&gt;
+
+&lt;p&gt;5-10% of the world population is deaf or hard-of-hearing and rely on sign language as their primary form of communication. In this project, I set out to prototype a real-time system to translate the American Sign Language (finger spelled alphabet) from video into text. I will walk you through the current pipeline which utilises convolutional neural networks, transfer learning and a webcam with Keras and OpenCV - and some of my learning when implementing deep learning for real-time classification.&lt;/p&gt;
+
+&lt;div class=&quot;embed-wrapper-16x9&quot;&gt;&lt;iframe class=&quot;embed-innder&quot; src=&quot;//www.youtube.com/embed/sD1JKj7U7FM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 18 Oct 2017 00:00:00 -0500</pubDate>
+        <link>http://0.0.0.0:4000/2017/10/18/october-meetup.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/10/18/october-meetup.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>September Meetup</title>
+        <description>&lt;h3 id=&quot;spatial-range-queries-using-python-in-memory-indices&quot;&gt;Spatial Range Queries using Python In-Memory Indices&lt;/h3&gt;
+&lt;h4 id=&quot;alexander-müller&quot;&gt;Alexander Müller&lt;/h4&gt;
+
+&lt;p&gt;When you’re working with a spatial dataset a common use case is that you need to get points of interests that are within a certain radius of a reference point, also know as spatial range queries. A standard solution for this problem is to use databases like MongoDB or Postgres which provided advanced spatial indexing capabilities. However, if you don’t have those capabilities available or you need to perform millions of queries and don’t want to add load to your production database, you need to explore other alternatives.&lt;/p&gt;
+
+&lt;p&gt;Thus, this talk will discuss a potential remedy for this problem by showing how to use python together with some available libraries (&lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sklearn&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;rtree&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;geohash&lt;/code&gt;) to enable in-memory radius searches. We will dive into some implementation details and show which methods to use for which use cases, by benchmarking them against each other.&lt;/p&gt;
+
+&lt;div class=&quot;embed-wrapper-16x9&quot;&gt;&lt;iframe class=&quot;embed-innder&quot; src=&quot;//www.youtube.com/embed/_95bSEqMzUA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;About the Speaker: &lt;em&gt;Alex started his career at SAP in Walldorf where he was working for the predictive maintenance team. After pursuing his Masters degree in Data &amp;amp; Web Science at the University of Mannheim, Alex moved to Berlin to join MiNODES a leading Brick-and-Mortar Retail Analytics Startup. There he helped the company building its wifi positioning platform and is now responsible as the Lead Data Scientist to develop new data and predictive products.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In his position as a founder of Hackerstolz - one of the biggest non-profit hackathon hosts in Germany-, Alex is also the co-creator of food{hacks} and mobility{hacks}.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;using-machine-learning-in-python-to-diagnose-malaria&quot;&gt;Using Machine Learning in Python to diagnose Malaria&lt;/h3&gt;
+&lt;h4 id=&quot;eduardo-peire&quot;&gt;Eduardo Peire&lt;/h4&gt;
+
+&lt;p&gt;Malaria is a worldwide disease killing between 500.000 and 800.00 people every year. It affects lots of countries and spreads quickly.&lt;/p&gt;
+
+&lt;p&gt;Until now, malaria is diagnosed either with paper stripes or, the most common and accurate method, visual inspection through a microscope. But there are new technologies to solve this problem, such as Computer Vision and machine learning.&lt;/p&gt;
+
+&lt;div class=&quot;embed-wrapper-16x9&quot;&gt;&lt;iframe class=&quot;embed-innder&quot; src=&quot;//www.youtube.com/embed/ZX7HUJPfdlU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;About the Speaker: &lt;em&gt;Eduardo Peire is an engineer from Barcelona who developed a device under 50€, he will explain how it’s device is able to diagnose malaria from a blood drop with Convolutional Neural Networks using &lt;code class=&quot;highlighter-rouge&quot;&gt;keras&lt;/code&gt; on the top of &lt;code class=&quot;highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Sep 2017 00:00:00 -0500</pubDate>
+        <link>http://0.0.0.0:4000/2017/09/20/september-meetup.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/09/20/september-meetup.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Reflections on PyData Berlin 2017</title>
+        <description>&lt;p&gt;We wanted to share some reflections from two first-time PyData Berlin 2017 participants who were also a part of the diversity scholarship program sponsored by the &lt;a href=&quot;https://www.python.org/psf/&quot;&gt;Python Software Foundation&lt;/a&gt;. &lt;a href=&quot;https://www.linkedin.com/in/szilvia-téglás-a522a690&quot;&gt;Szilvia Téglás&lt;/a&gt; and &lt;a href=&quot;https://www.linkedin.com/in/katinka-jeszenszki-87553758&quot;&gt;Katinka Jeszenszki&lt;/a&gt; visited from Budapest, and share their impressions of the conference with fresh eyes!&lt;/p&gt;
+
+&lt;h2 id=&quot;reflections-on-pydata-berlin-2017&quot;&gt;Reflections on PyData Berlin 2017&lt;/h2&gt;
+
+&lt;p&gt;Katinka and I started to attend &lt;a href=&quot;https://www.meetup.com/R-Ladies-Budapest/&quot;&gt;R-ladies Budapest&lt;/a&gt; meetups last year, when it was formed. We’ve heard about PyData Berlin Conference and its scholarship program in that group and it seemed like a great opportunity, so we applied and we received funding.&lt;/p&gt;
+
+&lt;p&gt;Both of us work as data analysts in Budapest and we have some experience in programming, but actually at the time we hadn’t used Python before (I finished an online Python course 3 years ago, but I unfortunately haven’t had time to practice since then).&lt;/p&gt;
+
+&lt;p&gt;We were very excited; we started to plan days before the conference which tutorials, talks and lectures we wanted to participate in and we also were so happy to see Berlin again, because both of us love this city. We were a bit worried too, because we didn’t have experience with Python, but the scholarship’s form encouraged us to attend despite being beginners, and it really didn’t cause problems for us in the end.&lt;/p&gt;
+
+&lt;p&gt;All tutorials and lectures were very inspiring, as well as talks with other participants during the breaks. We saw how easily we can use Python and its packages to analyze new fields which we hadn’t used before. We heard about a lot of interesting training programs in Berlin such as &lt;a href=&quot;https://www.datascienceretreat.com/&quot;&gt;Data Science Retreat&lt;/a&gt;, so maybe someday we will return to learn more :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Szilvia and Katinka&quot; src=&quot;/images/2017-08-28/pydata_berlin_reflections.jpg&quot; class=&quot;col-width-img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I should mention here, that before the conference I didn’t even know &lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter Notebook&lt;/a&gt; and similar things existed, and since the tutorial day I have started using it for my personal projects. I think it’s a very-very useful tool.&lt;/p&gt;
+
+&lt;p&gt;The whole conference was very well-organized and we appreciated the healthy catering. We want to thank the organizers for givings us the opportunity to participate, and special thanks to Katharine, who helped us a lot with everything!&lt;/p&gt;
+
+&lt;p&gt;We can and we &lt;em&gt;do&lt;/em&gt; recommend this conference to others, actually we tell a lot about it to our friends and colleagues since we’ve come back.&lt;/p&gt;
+
+&lt;p&gt;– Szilvia Téglás and Katinka Jeszenszki&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Aug 2017 00:00:00 -0500</pubDate>
+        <link>http://0.0.0.0:4000/2017/08/28/reflections-on-pydata-berlin-2017.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/08/28/reflections-on-pydata-berlin-2017.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Why Support PyData?</title>
+        <description>&lt;p&gt;There are so many different conferences, projects and events you can attend every year. Why support PyData? Why join the PyData meetup or conference?&lt;/p&gt;
+
+&lt;p&gt;Clearly as an organizer for PyData Berlin, I have my reasons for supporting this organization, so let me name a few:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Giving Back to Open-Source&lt;/em&gt;: PyData conference proceeds go to &lt;a href=&quot;https://www.numfocus.org/&quot;&gt;NumFOCUS&lt;/a&gt;, who in turn &lt;a href=&quot;https://www.numfocus.org/open-source-projects/&quot;&gt;supports many open-source projects&lt;/a&gt;, such as Julia, NumPy, Jupyter and many more. By donating my time to organize with PyData Berlin, I am helping encourage financial and community support of open-source tools and the authors who contribute their time.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Awesome Community&lt;/em&gt;: The PyData community mirrors some of the amazing community experiences I have had with Python (&lt;a href=&quot;https://www.flickr.com/photos/pyladies/6787445425/&quot;&gt;and the original PyLadies&lt;/a&gt; chapter). A friendly and diverse group focused on growth, intellectual advancement and helping one another.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Advanced Topics and Talks&lt;/strong&gt;: As an organizer, I get to learn, debate and grow as a data scientist nearly every time I attend an event. The focus on research and advanced topics keeps me and other folks I respect coming back for better conversations and more learning.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are numerous other reasons, including how I feel about giving back to my local community and supporting diversity initiatives in technology communities.&lt;/p&gt;
+
+&lt;p&gt;So whatever your motives are for attending conferences and events, I hope that I have given you a few to ponder. Perhaps, I will see you at &lt;a href=&quot;https://pydata.org/berlin2017/&quot;&gt;the upcoming PyData Berlin conference&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;- &lt;a href=&quot;https://twitter.com/kjam&quot;&gt;@kjam&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Jun 2017 00:00:00 -0500</pubDate>
+        <link>http://0.0.0.0:4000/2017/06/26/why-support-pydata.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/06/26/why-support-pydata.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
