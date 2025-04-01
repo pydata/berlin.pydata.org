@@ -1,0 +1,28 @@
+# Jekyll specific
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Logs and temporary files
+*.log
+*.tmp
+*.pid
+*.gem
+.DS_Store
+Thumbs.db
+
+# Bundler dependencies
+/vendor/bundle/
+
+# Node modules (if using Node.js)
+node_modules/
+
+# Environment files
+.env
+.env.*
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
