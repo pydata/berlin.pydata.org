@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What’s Really Going On in Your Model? A Python Guide to Explainable AI - PyData Berlin 2025</title>
+<meta name="description" content="As machine learning models become more complex, understanding why they make certain predictions is becoming just as important as the predictions themselves. Whe... By Yashasvi Misra">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/JE8YJT.html">
+<meta property="og:title" content="What’s Really Going On in Your Model? A Python Guide to Explainable AI - PyData Berlin 2025">
+<meta property="og:description" content="As machine learning models become more complex, understanding why they make certain predictions is becoming just as important as the predictions themselves. Whe... By Yashasvi Misra">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/JE8YJT.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/JE8YJT.html">
+<meta name="twitter:title" content="What’s Really Going On in Your Model? A Python Guide to Explainable AI - PyData Berlin 2025">
+<meta name="twitter:description" content="As machine learning models become more complex, understanding why they make certain predictions is becoming just as important as the predictions themselves. Whe... By Yashasvi Misra">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/JE8YJT.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/JE8YJT.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Ethics & Privacy</span>
+        
+        <h1>What’s Really Going On in Your Model? A Python Guide to Explainable AI</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Novice</span>
+            
+            <span><strong>Company/Institute:</strong> Pure Storage</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>As machine learning models become more complex, understanding why they make certain predictions is becoming just as important as the predictions themselves. Whether you're dealing with business stakeholders, regulators, or just debugging unexpected results, the ability to explain your model is no longer optional , it's essential.
+
+In this talk, we'll walk through practical tools in the Python ecosystem that help bring transparency to your models, including SHAP, LIME, and Captum. Through hands-on examples, you'll learn how to apply these libraries to real-world models from decision trees to deep neural networks and make sense of what's happening under the hood.
+
+If you've ever struggled to explain your model’s output or justify its decisions, this session will give you a toolkit to build more trustworthy, interpretable systems  without sacrificing performance.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>The prerequisites of this talk are:-
+1.Basic familiarity with machine learning concepts
+2.Working knowledge of Python
+3.Some experience training or using ML models</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>We’ve all been there, your machine learning model performs well in testing, but when it comes time to explain why it made a specific prediction, things get murky. In many real-world applications, especially in domains like healthcare, finance, or operations, being able to explain your model isn’t just helpful it’s critical.This talk is a practical walkthrough of explainable AI (XAI) tools in Python, aimed at data scientists and engineers who want to make their models more transparent and trustworthy. We’ll cover libraries like SHAP, LIME, and Captum, and show how to use them to generate both local and global explanations for models ranging from random forests to deep neural nets.You’ll see hands-on examples, common pitfalls to avoid, and ideas for integrating interpretability into your workflow whether you’re trying to debug your model or justify its predictions to a non-technical stakeholder.If you’ve ever wanted to better understand your own models or help others trust them this session is for you.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/yashi_image_9zZ7T0n.png" alt="Yashasvi Misra" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Yashasvi Misra</h3>
+                
+                <p><strong>Data Engineer</strong></p>
+                
+                
+                <p>Yashasvi Misra is a Data Engineer at Pure Storage and Chair of the NumFOCUS Code of Conduct Working Group, where she helps foster inclusive practices across the open-source ecosystem. She has contributed to foundational projects like NumPy and has been an active part of the Python community since her college days. Yashasvi is also a passionate advocate for diversity and inclusion in tech. She introduced a period leave policy at a previous organisation and continues to work toward building more equitable workplaces. She has shared her work and insights at conferences around the world, including PyCon India, PyCon Europe, PyLadiesCon, and PyData Global.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

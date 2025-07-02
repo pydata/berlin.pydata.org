@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beyond Linear Funnels: Visualizing Conditional User Journeys with Python - PyData Berlin 2025</title>
+<meta name="description" content="Optimizing user funnels is a common task for data analysts and data scientists. Funnels are not always linear in the real world. often, the next step depends on... By Yaseen Esmaeelpour">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/VBCU9H.html">
+<meta property="og:title" content="Beyond Linear Funnels: Visualizing Conditional User Journeys with Python - PyData Berlin 2025">
+<meta property="og:description" content="Optimizing user funnels is a common task for data analysts and data scientists. Funnels are not always linear in the real world. often, the next step depends on... By Yaseen Esmaeelpour">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/VBCU9H.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/VBCU9H.html">
+<meta name="twitter:title" content="Beyond Linear Funnels: Visualizing Conditional User Journeys with Python - PyData Berlin 2025">
+<meta name="twitter:description" content="Optimizing user funnels is a common task for data analysts and data scientists. Funnels are not always linear in the real world. often, the next step depends on... By Yaseen Esmaeelpour">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/VBCU9H.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/VBCU9H.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Visualisation & Jupyter</span>
+        
+        <h1>Beyond Linear Funnels: Visualizing Conditional User Journeys with Python</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Novice</span>
+            
+            <span><strong>Company/Institute:</strong> Instapro (MyHammer)</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>Optimizing user funnels is a common task for data analysts and data scientists. Funnels are not always linear in the real world. often, the next step depends on earlier responses or actions. This results in complex funnels that can be tricky to analyze. I’ll introduce an open-source Python library I developed that analyzes and visualizes non-linear, conditional funnels by utilizing Graphviz and Streamlit. It calculates conversion rates, drop-offs, time spent on each step, and highlights bottlenecks by color. Attendees will learn about how to quickly explore complex user journeys and generate insightful funnel data.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>basic knowledge of python, pip and analytics</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>When we talk about funnels in analytics, most people think of linear funnels, where users move step-by-step through a fixed sequence of actions. But in real-world applications like dynamic forms, on-boarding flows, or diagnostic tools, funnels are often conditional and non-linear. The next step in the journey depends on user input at earlier stages, leading to different paths and variable funnel lengths for every user.</p>
+<p>An example is a vehicle pricing tool: while all users answer general questions (e.g., type, mileage), follow-up questions may differ based on previous answers. For instance, only users with electric cars are asked about battery capacity. This branching logic creates challenges for traditional funnel visualization techniques which mostly consider funnels as linear.</p>
+<p>Alternative immediate solutions are not perfect:<br />
+Visuals like Sankey diagrams are too limited/general and often visually collapse under real-world data messiness (users going back and forth, drop-offs, missing events).<br />
+Milestone-based funnels (where you set a few milestones during the funnel to mimic linear funnels) simplify things too much,  hiding key details and masking where things actually break down.</p>
+<p>As a data analyst, I needed a way to understand and visualize such nonlinear flows in a more straightforward and consumable way. Finding no library that met this need out of the box, I created funnelius, a Python library that processes raw event logs into ready to consume funnel graphs.</p>
+<p>The library accepts a pandas DataFrame with user_id, action and action_timestamp columns. Then it will use pandas to transform DataFrame to a suitable format to feed into graphviz. It also adds necessary columns needed to filter and declutter the graph. Then it will visualize the funnel using dot rendering engine which includes:<br />
+- Calculating key metrics for every step: number of users per step, conversion rates, time spent, percentage of total users and drop-offs. <br />
+- conditional formatting based on different metrics to highlight bottlenecks.<br />
+- Comparison with another dataframe and showing changes. <br />
+- Showing the answers that users gave in each step and calculate the percentage of answers on every step.l.</p>
+<p>The graph can be fine tuned with some options like:<br />
+- Only show top-N routes to declutter graph<br />
+- Show/hide Dropped users data<br />
+- Only include users who started from specific steps. If we know that users must have specific steps as a starting point, this helps remove possible data issues if any.<br />
+- Define metrics that should be calculated </p>
+<p>There is also a Streamlit-based UI to interactively adjust parameters and export funnel analysis as PDF instead of doing it programmatically.</p>
+<p>This tool can be helpful for data analysts and data scientists with Python knowledge who need to analyse conditional funnels.</p>
+<p>Github Repository:<br />
+https://github.com/yaseenesmaeelpour/funnelius</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <div class="speaker-image" style="background: #e0e0e0; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 3em; color: #999;">Y</span>
+            </div>
+            
+            <div class="speaker-info">
+                <h3>Yaseen Esmaeelpour</h3>
+                
+                <p><strong>Senior Data Analyst</strong></p>
+                
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

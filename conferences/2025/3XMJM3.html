@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Risk Budget Optimization for Causal Mix Models - PyData Berlin 2025</title>
+<meta name="description" content="Traditional budget planners chase the highest predicted return and hope for the best. Bayesian models take the opposite route: they quantify uncertainty first, ... By Carlos Trujillo">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/3XMJM3.html">
+<meta property="og:title" content="Risk Budget Optimization for Causal Mix Models - PyData Berlin 2025">
+<meta property="og:description" content="Traditional budget planners chase the highest predicted return and hope for the best. Bayesian models take the opposite route: they quantify uncertainty first, ... By Carlos Trujillo">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/3XMJM3.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/3XMJM3.html">
+<meta name="twitter:title" content="Risk Budget Optimization for Causal Mix Models - PyData Berlin 2025">
+<meta name="twitter:description" content="Traditional budget planners chase the highest predicted return and hope for the best. Bayesian models take the opposite route: they quantify uncertainty first, ... By Carlos Trujillo">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/3XMJM3.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/3XMJM3.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">PyData & Scientific Libraries Stack</span>
+        
+        <h1>Risk Budget Optimization for Causal Mix Models</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> PyMC Labs / Wise</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>Traditional budget planners chase the highest predicted return and hope for the best. Bayesian models take the opposite route: they quantify uncertainty first, then let us optimize budgets with that uncertainty fully on display. In this talk we’ll show how posterior distributions become a set of possible futures, and how risk‑aware loss functions convert those probabilities into spend decisions that balance upside with resilience. Whether you lead marketing, finance, or product, you’ll learn a principled workflow for turning probabilistic insight into capital allocation that’s both aggressive and defensible—no black‑box magic, just transparent Bayesian reasoning and disciplined risk management.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>Bayesian Mix Models, Budget Allocation, Bayesian Optimization</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>Budget planning often treats forecasts as fixed targets, leaving decision‑makers blind to the volatility hiding beneath the averages. This talk shows how Bayesian modelling turns every unknown—channel response, cost elasticity, future demand—into an explicit probability distribution. By simulating thousands of plausible futures, we can measure upside and downside simultaneously and translate a company’s risk appetite into clear optimisation objectives such as Value‑at‑Risk, Conditional VaR, entropic risk, or custom utility functions that respect budget caps and pacing rules.</p>
+<p>Using reproducible PyMC Code, we will walk through converting posterior samples into risk‑aware spend recommendations, and visualising trade‑offs so non‑technical stakeholders grasp both opportunity and exposure. </p>
+<p>Attendees will leave with a notebook and code to adapt pymc bayesian models with Pymc-Marketing to perform marketing budgets, capital allocation, or any scenario where uncertainty and risk tolerance must shape financial decisions.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/WhatsApp_Image_2025-01-25_at_00.46.35_2cxG0FY.jpeg" alt="Carlos Trujillo" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Carlos Trujillo</h3>
+                
+                <p><strong>Principal/Senior Data Scientist</strong></p>
+                
+                
+                <p>Eight years ago, I discovered a lasting passion for data and AI—the kind that keeps you experimenting long after your calendar says “done.” That curiosity took me from Venezuela to Chile and, most recently, to Estonia, where I collaborate with teams across Latin America, Europe, and Africa.
+
+After years in Chile doing Marketing consultancy, and working with companies like Omnicom Media Group at the Regional level, I move to help Bolt accelerate its marketing-data‑driven transformation, recently, shifted just a few tram stops north to Wise—Estonia’s largest tech unicorn—bringing everything I learned from one high‑velocity scale‑up to another. My focus remains on turning marketing ambitions into measurable, model‑powered outcomes, even when the roadmap seems to sprint faster than the release notes.
+
+Beyond the day job, I’m a core member of PyMC Labs, the research group behind open‑source projects such as PyMC, PyMC‑Marketing, CausalPy, and PyTensor. If you run PyMC‑Marketing and something unexpectedly works a little better, there’s a non‑zero chance it came from one of my late‑night pull requests.
+
+My long‑term goal is to master the hybrid role of “Marketing Scientist” blending statistical rigor with business storytelling. If you like statistics, bayesian models, data‑driven decisions, as well open‑source cameo, then let’s connect.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

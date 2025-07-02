@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>From Manual to LLMs: Scaling Product Categorization - PyData Berlin 2025</title>
+<meta name="description" content="How to use LLMs to categorize hundreds of thousands of products into 1,000 categories at scale? Learn about our journey from manual/rule-based methods, via fine... By Giampaolo Casolla, Ansgar Grüne">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/3LDDAB.html">
+<meta property="og:title" content="From Manual to LLMs: Scaling Product Categorization - PyData Berlin 2025">
+<meta property="og:description" content="How to use LLMs to categorize hundreds of thousands of products into 1,000 categories at scale? Learn about our journey from manual/rule-based methods, via fine... By Giampaolo Casolla, Ansgar Grüne">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/3LDDAB.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/3LDDAB.html">
+<meta name="twitter:title" content="From Manual to LLMs: Scaling Product Categorization - PyData Berlin 2025">
+<meta name="twitter:description" content="How to use LLMs to categorize hundreds of thousands of products into 1,000 categories at scale? Learn about our journey from manual/rule-based methods, via fine... By Giampaolo Casolla, Ansgar Grüne">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/3LDDAB.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/3LDDAB.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Generative AI</span>
+        
+        <h1>From Manual to LLMs: Scaling Product Categorization</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk (long)</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> GetYourGuide</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>How to use LLMs to categorize hundreds of thousands of products into 1,000 categories at scale? Learn about our journey from manual/rule-based methods, via fine-tuned semantic models, to a robust multi-step process which uses embeddings and LLMs via the OpenAI APIs. This talk offers data scientists and AI practitioners learnings and best practices for putting such a complex LLM-based system into production. This includes prompt development, balancing cost vs. accuracy via model selection, testing mult-case vs. single-case prompts, and saving costs by using the OpenAI Batch API and a smart early-stopping approach. We also describe our automation and monitoring in a PySpark environment.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>Attendees should have a foundational understanding of machine learning concepts and familiarity with the Python data science stack. Exposure to vector embeddings or Large Language Model (LLM) APIs is helpful but not mandatory.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p><strong>Target Audience:</strong> Data scientists, AI/ML engineers, and practitioners interested in applying large language models (LLMs) / generative AI to solve real-world classification problems at scale. Attendees should have a foundational understanding of machine learning concepts and familiarity with the Python data science stack. Exposure to vector embeddings or LLM APIs is helpful but not mandatory.</p>
+<p><strong>Takeaway:</strong> Attendees will gain practical insights and learn best practices for building, debugging, scaling, and productionizing a complex, multi-step generative AI system for large-scale product categorization. They will understand the evolution from traditional methods to LLMs, learn specific techniques for prompt engineering, batch processing, cost optimization with models like OpenAI's, and see the tangible business impact of such a system.</p>
+<p><strong>Detailed Outline:</strong></p>
+<p>This talk chronicles our journey tackling a yet challenging problem: accurately categorizing hundreds of thousands of diverse products into a fine-grained taxonomy of over 1,000 categories. We'll share our evolution from initial manual and rule-based systems to a sophisticated, production-ready Generative AI pipeline.</p>
+<ul>
+<li><strong>Part 1: The Challenge &amp; Initial Approaches (10 minutes)</strong><ul>
+<li>Introduction to the business need for accurate product categorization at scale.</li>
+<li>Overview of the limitations encountered with traditional methods:<ul>
+<li>Manual Curation: Slow, expensive, inconsistent, and impossible to scale.</li>
+<li>Rule-Based Systems: Brittle, hard to maintain, and unable to handle nuances or new product types.</li>
+<li>Fine-tuned Semantic Models: An improvement, but struggled with zero-shot generalization to new categories and required significant labeled data and retraining.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Part 2: Entering the GenAI Era - Iterations &amp; Lessons Learned (10 minutes)</strong><ul>
+<li>Our initial exploration using LLMs for categorization, what worked, and what failed.</li>
+<li><strong>Developing the Prompt:</strong> We'll dive deep into the iterative process of prompt engineering for this complex multi-label, hierarchical classification task. We'll show examples of early prompts, their failure modes (e.g., inconsistent output format, hallucinated categories, difficulty handling multiple classification signals), and the refinements that led to more reliable results. We will discuss techniques for achieving structured output (e.g., JSON) from the LLM.</li>
+<li><strong>Early Scaling Issues:</strong> Discussing the pitfalls of naive API usage, latency problems, and prohibitive costs when dealing with large volumes.</li>
+</ul>
+</li>
+<li><strong>Part 3: Building a Robust, Scalable GenAI Pipeline (10 minutes)</strong><ul>
+<li><strong>The Hybrid Approach:</strong> Detailing our successful multi-step architecture that combines the strengths of semantic embeddings for efficient candidate retrieval/filtering and LLMs (specifically leveraging OpenAI models) for nuanced final categorization.</li>
+<li><strong>Productionization Strategies:</strong><ul>
+<li><em>Batching:</em> Implementing efficient batch processing using asynchronous requests and the OpenAI Batch API to drastically reduce latency and cost.</li>
+<li><em>Cost vs. Accuracy:</em> Strategies for selecting the right model based on complexity and cost constraints.</li>
+<li><em>Semantic Similarity &amp; Early Stopping:</em> Using vector similarity to intelligently prune the search space, avoiding the need to evaluate every product against all 1,000+ categories with the LLM, thus significantly optimizing cost and throughput.</li>
+<li><em>Automation &amp; Monitoring</em>: How we process updates of categories and products automatically in PySpark and monitor that the live system works as expected.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Part 4: Measuring Impact &amp; Looking Ahead (10 minutes)</strong><ul>
+<li>Presenting the results: Showcasing the significant improvements in categorization accuracy and coverage compared to previous methodsIllustrative examples of challenging products correctly categorized by the GenAI system.</li>
+<li>Discussing the tangible business value derived as measured in A-B tests </li>
+<li>Briefly touching upon ongoing work and future directions.</li>
+</ul>
+</li>
+</ul>
+<p>This presentation will focus on the practical application and engineering challenges, sharing reusable techniques and hard-won lessons applicable to anyone looking to leverage the power of generative AI for large-scale, real-world problems. We aim to provide a transparent account of not just the successes, but also the crucial learnings from failures encountered along the way.</p>
+        </div>
+
+        <h2>Speakers</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/Giampaolo_Casolla_resized_39uW5dK.jpg" alt="Giampaolo Casolla" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Giampaolo Casolla</h3>
+                
+                <p><strong>Senior Data Scientist</strong></p>
+                
+                
+                <p>Giampaolo Casolla is a Senior Data Scientist at GetYourGuide, leveraging advanced machine learning and Generative AI to solve complex travel industry challenges. With expertise spanning areas like Safety, Risk, and Security, and strong skills in stats, Python, R, and cloud tech, he brings a diverse background to the role. Prior to GetYourGuide, Giampaolo developed award-winning ML solutions at Amazon and has a background in research with publications and conference presentations. At GetYourGuide, he's focused on integrating LLMs and GenAI into data products to drive innovation in travel technology.</p>
+                
+                
+            </div>
+        </div>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/AnsgarProfilePictureGYG2018MID_yV6V1mq.jpg" alt="Ansgar Grüne" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Ansgar Grüne</h3>
+                
+                <p><strong>Senior Data Scientist</strong></p>
+                
+                
+                <p>Ansgar Grüne is a Senior Data Scientist at GetYourGuide in Berlin. His work focuses on ML/AI approaches to improve the users search and discovery experience on the platform. He holds a Ph.D. in Theoretical Computer Science and has 10 years of experience as a Data Scientist in the travel industry following several years as software engineer.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

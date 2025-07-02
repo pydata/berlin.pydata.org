@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Causal Inference in Network Structures: Lessons learned From Financial Services - PyData Berlin 2025</title>
+<meta name="description" content="*Causal inference techniques are crucial to understanding the impact of actions on outcomes.* *This talk shares lessons learned from applying these techniques i... By Danial Senejohnny">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/HUNUEB.html">
+<meta property="og:title" content="Causal Inference in Network Structures: Lessons learned From Financial Services - PyData Berlin 2025">
+<meta property="og:description" content="*Causal inference techniques are crucial to understanding the impact of actions on outcomes.* *This talk shares lessons learned from applying these techniques i... By Danial Senejohnny">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/HUNUEB.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/HUNUEB.html">
+<meta name="twitter:title" content="Causal Inference in Network Structures: Lessons learned From Financial Services - PyData Berlin 2025">
+<meta name="twitter:description" content="*Causal inference techniques are crucial to understanding the impact of actions on outcomes.* *This talk shares lessons learned from applying these techniques i... By Danial Senejohnny">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/HUNUEB.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/HUNUEB.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">PyData & Scientific Libraries Stack</span>
+        
+        <h1>Causal Inference in Network Structures: Lessons learned From Financial Services</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Novice</span>
+            
+            <span><strong>Company/Institute:</strong> ABN AMRO Bank</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>*Causal inference techniques are crucial to understanding the impact of actions on outcomes.* *This talk shares lessons learned from applying these techniques in real-world scenarios where standard methods do not immediately apply. Our key question is: What is the causal impact of wealth planning services on a network of individual’s investments and securities? We'll examine the challenges posed by practical constraints and show how to deal with them before applying standard approaches like staggered difference-in-difference.* 
+
+*This self-contained talk is prepared for general data scientists who want to add causal inference techniques to their toolbox and learn from real-world data challenges.*</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>This talk is self-contained</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>Wealth planning is a service offered by financial institutions. The advice helps clients grow their wealth through investing. This talk focuses on measuring the true impact of these services on a network of individual’s investments and securities. However, measuring this impact presents several practical challenges, which will be tackled in this talk:</p>
+<p>1) Controlled experiments are often impossible in practice, leaving only observational data available.</p>
+<p>2) Defining robust control groups is challenging when treatments are administered to individuals in relationship graphs at different times.</p>
+<p>3) Analysis must account for multiple outcomes with different modalities—securities (time-series) and investing (binary).</p>
+<p>4) The parallel-trend assumption doesn't immediately hold.</p>
+<p>5) Market trends confounding effect on outcome needs to be corrected.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/peronal_photo_JIpFuli.jpg" alt="Danial Senejohnny" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Danial Senejohnny</h3>
+                
+                <p><strong>Data Scientists & Analytics Translator</strong></p>
+                
+                
+                <p>Danial is a data scientist & analytics translator with a PhD in applied mathematics (systems & control). In his career, he has experienced different sectors, i.e. manufacturing, cybersecurity, healthcare, and finance. In his current adventure at ABN AMRO, he contributes to personalized solutions that improves clients experience and satisfaction.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

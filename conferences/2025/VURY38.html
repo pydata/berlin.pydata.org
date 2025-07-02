@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Building an A/B Testing Framework with NiceGUI - PyData Berlin 2025</title>
+<meta name="description" content="NiceGUI is a Python-based web UI framework that enables developers to build interactive web applications without using JavaScript. In this talk, I’ll share how ... By Wessel van de Goor">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/VURY38.html">
+<meta property="og:title" content="Building an A/B Testing Framework with NiceGUI - PyData Berlin 2025">
+<meta property="og:description" content="NiceGUI is a Python-based web UI framework that enables developers to build interactive web applications without using JavaScript. In this talk, I’ll share how ... By Wessel van de Goor">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/VURY38.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/VURY38.html">
+<meta name="twitter:title" content="Building an A/B Testing Framework with NiceGUI - PyData Berlin 2025">
+<meta name="twitter:description" content="NiceGUI is a Python-based web UI framework that enables developers to build interactive web applications without using JavaScript. In this talk, I’ll share how ... By Wessel van de Goor">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/VURY38.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/VURY38.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Visualisation & Jupyter</span>
+        
+        <h1>Building an A/B Testing Framework with NiceGUI</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Novice</span>
+            
+            <span><strong>Company/Institute:</strong> Lotum GmbH</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>NiceGUI is a Python-based web UI framework that enables developers to build interactive web applications without using JavaScript. In this talk, I’ll share how my team used NiceGUI to create an internal A/B testing platform entirely in Python. I’ll discuss the key requirements for the platform, why we chose NiceGUI, and how it helped us design the UI, display results, and integrate with the backend. This session will demonstrate how NiceGUI simplifies development, reduces frontend complexity, and speeds up internal tool creation for Python developers.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>-</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>NiceGUI is a Python-based web UI framework that enables developers to create full-featured, interactive web applications without needing to write JavaScript. </p>
+<p>In this talk, I’ll share how my team and I used NiceGUI to build an internal A/B testing platform entirely in Python. A/B testing is essential for validating new features and improving user experience, and by creating a custom platform, we were able to streamline experiment management and simplify data visualization.</p>
+<p>This talk is ideal for Python developers, data scientists, or anyone interested in creating web-based internal tools quickly. If you're looking for a solution that minimizes frontend complexity while providing a powerful framework for building interactive applications, this talk will provide valuable insights. No prior knowledge of JavaScript or frontend frameworks is necessary; familiarity with Python and basic web concepts will suffice.</p>
+<p>After a brief introduction, I’ll first explain what A/B testing is and why it’s so crucial for making data-driven decisions. I’ll also discuss why having a custom-built platform can help improve experiment efficiency and results interpretation.</p>
+<p>Next, I’ll dive into the key requirements we had for the platform, such as flexibility, ease of use, and seamless integration with our existing backend systems. I’ll also explain why we chose NiceGUI over other Python-based frameworks, emphasizing its ability to help us build a robust web application without the complexities of traditional frontend development.</p>
+<p>Throughout the talk, I’ll walk through how we used NiceGUI to design the user interface, display results, and integrate with the backend. I’ll focus on the development experience, highlighting the challenges we faced and how NiceGUI’s features allowed us to make rapid progress while keeping things simple and Pythonic.</p>
+<p>The takeaway for the audience will be understanding how NiceGUI simplifies the development of interactive web applications, focusing on internal tools like dashboards or experiment management platforms. I’ll also share the benefits we’ve experienced with the platform so far and discuss the lessons we’ve learned. Finally, I’ll explain how NiceGUI helped us create an interactive, production-ready tool with minimal frontend complexity.</p>
+<p>This session will demonstrate, through a specific use case, how NiceGUI can be an ideal solution for Python developers looking to quickly build internal tools, reduce frontend complexity, and speed up development cycles.</p>
+<p>Agenda:<br />
+1. Introduction &amp; Background (5 minutes)<br />
+2. Requirements for an A/B Testing Platform (2 minutes)<br />
+3. Why We Chose NiceGUI (2 minutes)<br />
+4. How We Built It – Patterns &amp; Architecture (10 minutes)<br />
+5. Benefits and Outcomes (3 minutes)<br />
+6. Challenges and Lessons Learned (3 minutes)</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/9d36aa65-6a74-444c-aa6d-735e0d19ae61_FM1zAAW.png" alt="Wessel van de Goor" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Wessel van de Goor</h3>
+                
+                <p><strong>Analytics Engineer</strong></p>
+                
+                
+                <p>Wessel's greatest passion is working with data. He loves collecting, storing, transforming, analyzing, and presenting data. Wessel is an Analytics Engineer at Lotum, where he creates data models and develops ETL pipelines and dashboards to assist his colleagues in their daily work.
+
+Even in his free time, Wessel's love for data continues, as many of his hobbies can be explored in a data-driven way. He particularly enjoys diving into video and board games, analyzing everything that can be quantified.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

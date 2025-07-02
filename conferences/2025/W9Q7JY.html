@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deep Dive into the Synthetic Data SDK - PyData Berlin 2025</title>
+<meta name="description" content="In January the Synthetic Data SDK was introduced and it quickly is gaining traction as becoming the standard Open Source library for creating privacy-preserving... By Tobias Hann">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/W9Q7JY.html">
+<meta property="og:title" content="Deep Dive into the Synthetic Data SDK - PyData Berlin 2025">
+<meta property="og:description" content="In January the Synthetic Data SDK was introduced and it quickly is gaining traction as becoming the standard Open Source library for creating privacy-preserving... By Tobias Hann">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/W9Q7JY.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/W9Q7JY.html">
+<meta name="twitter:title" content="Deep Dive into the Synthetic Data SDK - PyData Berlin 2025">
+<meta name="twitter:description" content="In January the Synthetic Data SDK was introduced and it quickly is gaining traction as becoming the standard Open Source library for creating privacy-preserving... By Tobias Hann">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/W9Q7JY.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/W9Q7JY.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Data Handling & Engineering</span>
+        
+        <h1>Deep Dive into the Synthetic Data SDK</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Tutorial</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> MOSTLY AI</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>In January the Synthetic Data SDK was introduced and it quickly is gaining traction as becoming the standard Open Source library for creating privacy-preserving synthetic data. In this hands-on tutorial we're going beyond the basics and we'll look at many of the advanced features of the SDK including differential privacy, conditional generation, multi-tables, and fair synthetic data.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>Knowledge of Python required
+Knowledge of the Synthetic Data SDK recommended
+Basic knowledge around privacy and fairness recommended</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>This hands-on tutorial will take participants beyond the basics of the Synthetic Data SDK, the emerging open-source standard for creating privacy-preserving synthetic data.</p>
+<p>After a brief recap of the SDK’s core capabilities, the session will dive into advanced functionality, beginning with an in-depth exploration of differential privacy. Attendees will learn how the SDK integrates formal privacy guarantees, configure key parameters (i.e., epsilon and delta), and observe the trade-offs between privacy and utility through live examples.</p>
+<p>The session will then focus on conditional generation, demonstrating how users can guide synthetic data output based on specific constraints or target values - an essential feature for scenario testing and AI model validation.</p>
+<p>A dedicated section will cover multi-table synthesis, where participants will learn how to model and generate relational datasets with primary-foreign key dependencies, preserving structural and statistical integrity across multiple linked tables.</p>
+<p>Finally, the tutorial will introduce the concept of fair synthetic data, showing how the SDK supports data generation aligned with the principle of statistical parity to help reduce representational bias in downstream use cases.</p>
+<p>Each segment includes interactive coding exercises and real-world datasets to ensure practical understanding. Participants should have a working knowledge of Python and prior experience with the SDK or similar tools.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/headshot_tobias_Hann_ftBXrrz.jpeg" alt="Tobias Hann" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Tobias Hann</h3>
+                
+                <p><strong>CEO</strong></p>
+                
+                
+                <p>Tobias is the CEO of MOSTLY AI, the leader in privacy-preserving synthetic data. Originally from Vienna, Austria, he is currently based in Munich, Germany. Before joining MOSTLY AI, Tobias worked as a management consultant with the Boston Consulting Group and in tech start-ups in different leadership roles. He earned a PhD from the Vienna University of Business and Economics and an MBA from the Haas School of Business at UC Berkeley. With his extensive background in strategy and technology, Tobias drives MOSTLY AI’s mission to revolutionize data access and data insights across industries.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

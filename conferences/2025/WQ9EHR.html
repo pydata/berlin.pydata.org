@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bridging Custom Schemas and Wikidata with an LLM-Assisted Interactive Python Tool - PyData Berlin 2025</title>
+<meta name="description" content="Many projects build knowledge graphs with custom schemas but struggle to align them with standard hubs like Wikidata. Manual mapping is tedious and error-prone,... By Sankalp Gilda, Ph.D.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/WQ9EHR.html">
+<meta property="og:title" content="Bridging Custom Schemas and Wikidata with an LLM-Assisted Interactive Python Tool - PyData Berlin 2025">
+<meta property="og:description" content="Many projects build knowledge graphs with custom schemas but struggle to align them with standard hubs like Wikidata. Manual mapping is tedious and error-prone,... By Sankalp Gilda, Ph.D.">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/WQ9EHR.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/WQ9EHR.html">
+<meta name="twitter:title" content="Bridging Custom Schemas and Wikidata with an LLM-Assisted Interactive Python Tool - PyData Berlin 2025">
+<meta name="twitter:description" content="Many projects build knowledge graphs with custom schemas but struggle to align them with standard hubs like Wikidata. Manual mapping is tedious and error-prone,... By Sankalp Gilda, Ph.D.">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/WQ9EHR.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/WQ9EHR.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Natural Language Processing & Audio (incl. Generative AI NLP)</span>
+        
+        <h1>Bridging Custom Schemas and Wikidata with an LLM-Assisted Interactive Python Tool</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> DeepThought Solutions</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>Many projects build knowledge graphs with custom schemas but struggle to align them with standard hubs like Wikidata. Manual mapping is tedious and error-prone, while fully automated methods often lack accuracy. This talk introduces `wikidata-mapper`, a Python tool leveraging Large Language Models (LLMs via `DSPy`) to suggest semantic mappings between simple YAML ontology schemas and Wikidata identifiers (QIDs/PIDs). We demonstrate its interactive workflow, including confidence-based auto-acceptance, batch suggestion/review modes for scalability, and a novel hierarchy suggestion feature. Learn how this tool combines LLM power with human oversight to efficiently ground custom knowledge representations in Wikidata, using libraries like `inquirer`, `tenacity`, and `platformdirs`. Ideal for KG practitioners, data engineers, and anyone needing to integrate custom schemas with public knowledge bases.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>* **Intermediate Python Proficiency:** Attendees should be comfortable reading and understanding Python code, including object-oriented concepts (classes, methods), functions, standard data structures (dictionaries, lists, sets), and basic exception handling.
+* **Conceptual Understanding of Knowledge Graphs:** A basic familiarity with the concept of knowledge graphs – representing entities (nodes) and their relationships (edges) – and their general purpose (e.g., data integration, question answering, RAG) is expected. Deep expertise in graph theory or specific graph databases is not required.
+* **Familiarity with Data Schemas/Ontologies:** Understanding the purpose of defining structured schemas or lightweight ontologies (e.g., defining types like 'Person', 'Organization', and relations like 'worksFor') to organize data is beneficial. No experience with formal ontology languages like OWL/RDF is necessary.
+* **Awareness of Large Language Models (LLMs):** A basic understanding of what LLMs are and their capability for semantic understanding and text generation based on prompts is helpful. Deep knowledge of LLM architectures or training is not needed.
+* **(Helpful, Not Required):** Prior awareness of what Wikidata is (a large, collaborative knowledge base) and the basic concept of interacting with web APIs will provide useful context but will be briefly touched upon in the talk.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p><strong>(1) The Challenge: Isolated Knowledge &amp; the Need for Grounding</strong></p>
+<p>Many data science and knowledge-based projects naturally involve creating custom schemas or lightweight ontologies – defining terms like <code>PROJECT_LEAD</code>, <code>SALES_REGION</code>, or <code>COMPONENT_FAILURE_MODE</code> that make sense within a specific context (e.g., in simple YAML files). While valuable locally, these schemas often become <strong>isolated knowledge silos</strong>. Without alignment to a common standard, integrating data across projects becomes difficult, querying consistently is a challenge, and opportunities to leverage vast amounts of external, structured knowledge are missed. How can we connect these custom concepts to the wider world?</p>
+<p>This is where <strong>Wikidata</strong> comes in. Why map to Wikidata specifically?</p>
+<ul>
+<li>It's one of the largest, <strong>collaboratively edited, multilingual knowledge bases</strong> available, acting as a central structured data hub for Wikimedia projects and countless external applications ().</li>
+<li>Its <strong>vast scale and broad domain coverage</strong> (from proteins to companies to historical events) make it an ideal <strong>universal anchor point</strong> for grounding diverse custom schemas.</li>
+<li>Mapping provides immediate benefits:<ul>
+<li><strong>Standardization:</strong> Your <code>SALES_REGION</code> aligns with a standard Wikidata geo-identifier (QID).</li>
+<li><strong>Interoperability:</strong> Your graph can now connect with other datasets linked via Wikidata IDs.</li>
+<li><strong>Powerful Data Enrichment:</strong> Link your internal 'Acme Corp' entity to its Wikidata QID, and you can instantly query for its industry (P452), headquarters coordinates (P625), official website (P856), subsidiaries (P355), and much more, automatically enriching your own data.</li>
+</ul>
+</li>
+</ul>
+<p>However, <strong>the mapping process itself is a major bottleneck.</strong> Manually finding the correct Wikidata QID/PID for potentially hundreds of custom terms is extremely tedious, requires niche expertise, and is error-prone. Fully automated alignment tools often struggle with the semantic ambiguity inherent in custom schemas (e.g., does 'position' mean job title P39 or coordinate P625?).</p>
+<p><strong>(2) Our Approach: LLM-Assisted Interactive Mapping</strong></p>
+<p>This talk introduces a practical Python tool and workflow designed to <strong>dramatically accelerate the process of mapping custom schema elements (from formats like YAML) to Wikidata identifiers</strong>, while maintaining high accuracy through efficient human oversight. We combine the semantic reasoning of Large Language Models (LLMs) with an interactive workflow.</p>
+<p><strong>(3) Workflow Walkthrough:</strong></p>
+<p>We will walk through the tool's workflow:</p>
+<ul>
+<li><strong>Input:</strong> Starting with a custom schema/ontology (e.g., a YAML file defining entity types like 'PERSON', 'COMPANY' and relations like 'worksFor').</li>
+<li><strong>Candidate Search:</strong> Automatically searching Wikidata (API client with caching and retries) for potential QID/PID matches.</li>
+<li><strong>LLM Suggestion:</strong> Using <code>dspy</code> to prompt an LLM with source term details and candidates, generating structured JSON suggestions (<code>LLMMappingSuggestion</code> Pydantic model) with confidence scores and reasoning.</li>
+<li><strong>Interactive Review:</strong> Demonstrating the <code>inquirer</code>-based CLI for quickly accepting/overriding/skipping LLM suggestions, aided by confidence thresholding for auto-acceptance.</li>
+<li><strong>Batch Modes:</strong> Explaining the scalable <code>--batch-suggest</code> and <code>--batch-review</code> modes for handling larger schemas efficiently.</li>
+<li><strong>Hierarchy Suggestion:</strong> Showcasing how the tool uses Wikidata's parent information (via SPARQL and another LLM prompt) to interactively suggest adding <code>subclass_of</code> links to the user's own schema, helping refine its structure.</li>
+<li><strong>Output:</strong> Generating the final schema file (YAML) enriched with Wikidata mappings and confirmed hierarchy links.</li>
+</ul>
+<p><strong>(4) Technical &amp; Engineering Highlights:</strong></p>
+<ul>
+<li>Briefly mention the Python libraries (<code>dspy</code>, <code>requests</code>, <code>tenacity</code>, <code>inquirer</code>, <code>pydantic</code>, <code>platformdirs</code>, <code>yaml</code>).</li>
+<li>Highlight robustness features: API retries, caching, structured error handling, decoupled design.</li>
+</ul>
+<p><strong>(5) Demo:</strong> <em>(Mention plan for a brief demo showcasing the interactive mapping and hierarchy suggestion.)</em></p>
+<p><strong>(6) Benefits &amp; Conclusion:</strong></p>
+<p>This approach provides a pragmatic solution to a common data integration bottleneck. By intelligently combining LLM suggestions with efficient human validation, it allows teams to:</p>
+<ul>
+<li>
+<p>Significantly speed up mapping custom schemas to Wikidata.</p>
+</li>
+<li>
+<p>Improve mapping consistency and accuracy.</p>
+</li>
+<li>
+<p>Enrich internal knowledge graphs by linking them to a global standard.</p>
+</li>
+<li>
+<p>Leverage Wikidata's structure to refine custom schemas.</p>
+</li>
+</ul>
+<p>Attendees will learn about a practical workflow applying LLMs to KG alignment and gain insights into building robust, interactive data tools with the modern Python stack.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/linkedin_pp_6sKYHhV.jpeg" alt="Sankalp Gilda, Ph.D." class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Sankalp Gilda, Ph.D.</h3>
+                
+                <p><strong>Machine Learning Engineer</strong></p>
+                
+                
+                <p>As a Staff MLE, Sankalp gets fired up by complex technical challenges, diving deep into time series, constrained optimization, and high-performance computing. He's currently exploring the practical frontier of Generative AI, applying LLMs and multimodal techniques to improve how knowledge graphs are built from diverse sources. This talk focuses on a crucial component of that work: efficiently mapping and aligning extracted concepts to standard knowledge bases like Wikidata. Off-duty, his adventures shift from algorithmic to atmospheric (skydiving) and aquatic (scuba diving), often accompanied by his adventure-loving dog.</p>
+                
+                
+                <div class="social-links">
+                    
+                    
+                    
+                    
+                    
+                    <a href="@spaceman_gilda" target="_blank" class="icon fa-twitter" title="X/Twitter"></a>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

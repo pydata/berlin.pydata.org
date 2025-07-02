@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Building Intelligent Systems with Agentic AI and Knowledge Graphs - PyData Berlin 2025</title>
+<meta name="description" content="This talk explores how we're applying agentic AI, ontology, and GraphRAG to tackle some complex data integration challenges in the trucking and logistics indust... By Emily White, Vinay Babu">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/JUQK3Y.html">
+<meta property="og:title" content="Building Intelligent Systems with Agentic AI and Knowledge Graphs - PyData Berlin 2025">
+<meta property="og:description" content="This talk explores how we're applying agentic AI, ontology, and GraphRAG to tackle some complex data integration challenges in the trucking and logistics indust... By Emily White, Vinay Babu">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/JUQK3Y.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/JUQK3Y.html">
+<meta name="twitter:title" content="Building Intelligent Systems with Agentic AI and Knowledge Graphs - PyData Berlin 2025">
+<meta name="twitter:description" content="This talk explores how we're applying agentic AI, ontology, and GraphRAG to tackle some complex data integration challenges in the trucking and logistics indust... By Emily White, Vinay Babu">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/JUQK3Y.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/JUQK3Y.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Generative AI</span>
+        
+        <h1>Building Intelligent Systems with Agentic AI and Knowledge Graphs</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Novice</span>
+            
+            <span><strong>Company/Institute:</strong> Trimble Inc</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>This talk explores how we're applying agentic AI, ontology, and GraphRAG to tackle some complex data integration challenges in the trucking and logistics industry. We'll detail the development of a system that integrates disparate data sources to provide accurate, data-driven insights for operational decision-making. Our approach enables semantic understanding of domain knowledge and intelligent reasoning to enhance efficiency and solve critical business problems. We will talk about the architectural design of the system, the challenges encountered during implementation, and the strategies employed to overcome them.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>No specialized knowledge of transportation and logistics is needed. Some familiarity with the basics of generative AI concepts will be helpful.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>The trucking and logistics (T&amp;L) industry, as we've experienced, faces some pretty complex operational and strategic challenges. A key issue is the need to synthesize information from multiple, disparate data sources, and to really understand the intricate relationships between the different entities involved. In this presentation, we'll focus on how we tackled these challenges. We developed a system that leverages agentic AI to integrate data, which, in turn, allows for a deeper understanding of the underlying domain, and ultimately, better decision-making. </p>
+<p>Our approach utilizes the following key technologies:<br />
+- <strong>Ontology:</strong> We developed an ontology to represent key Transportation &amp; Logistics entities and their relationships, providing a structured foundation for data integration and semantic reasoning. This ontology serves as a crucial knowledge framework, enabling a shared understanding of the domain.<br />
+- <strong>Agentic AI:</strong> We employ autonomous AI agents to process information, understand complex queries, and generate coherent, data-driven insights. These agents leverage the ontology to effectively navigate and synthesize information from the integrated data sources.<br />
+- <strong>GraphRAG (Graph Retrieval-Augmented Generation):</strong> We utilize GraphRAG to enhance the reasoning capabilities of our AI agents. By constructing a knowledge graph (potentially instantiated from the ontology), we enable the retrieval of relevant context, improving the accuracy and depth of the generated insights.</p>
+<p>A significant challenge in this domain is the integration of data from varied sources, which often exhibit:<br />
+- <strong>Semantic heterogeneity:</strong> Different systems use different terms and definitions.<br />
+- <strong>Undefined relationships:</strong> Explicit connections between data points may be lacking.</p>
+<p>Our approach, centered on ontology and GraphRAG, addresses these challenges by providing a structured knowledge representation that AI agents can effectively utilize.</p>
+<p>Attendees of this talk will gain insights into:<br />
+- How agentic AI can be effectively used for data integration in complex industry settings.<br />
+- The role of ontologies in defining and encoding relationships across diverse data sources.<br />
+- The application of GraphRAG to enhance the reasoning capabilities of AI agents.<br />
+- A real-world exploration of applying these techniques to the trucking and logistics industry.<br />
+- Some practical considerations and the lessons we've learned from our experience.</p>
+<p>This presentation is valuable for data scientists, AI/ML engineers, and anyone interested in innovative approaches to data integration and building intelligent systems for complex domains. We'll discuss the conceptual framework and our explorations into how ontology can bridge the gap for agentic AI to effectively reason across heterogeneous data landscapes.</p>
+        </div>
+
+        <h2>Speakers</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/IMG_4262_bQ8DMYT.jpg" alt="Emily White" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Emily White</h3>
+                
+                
+                <p>I am a data scientist with a PhD in Geography, I love diving deep into datasets to unearth hidden insights. My expertise lies in the transportation and logistics domain, where I creatively leverage existing data to drive impactful solutions. Always seeking novel ways to connect the dots and unlock new possibilities.</p>
+                
+                
+            </div>
+        </div>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/my_pic_7YaNHgw.png" alt="Vinay Babu" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Vinay Babu</h3>
+                
+                
+                <p>Vinay is a Senior Data Scientist at Trimble, specializing in transportation analytics. He was awarded a patent for his work in the field and brings a strong foundation in statistical modeling and machine learning to his role. He holds a Bachelor's degree in Electrical Engineering and a Postgraduate Diploma in Applied Statistics.
+
+He is passionate about making data science accessible and impactful. Outside of his day job, he likes solving logic grid puzzles and brain teasers</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

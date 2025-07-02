@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Democratizing Experimentation: How GetYourGuide Built a Flexible and Scalable A/B Testing Platform - PyData Berlin 2025</title>
+<meta name="description" content="At GetYourGuide, we transformed experimentation from a centralized, closed system into a democratized, self-service platform accessible to all analysts, enginee... By Konrad Richter">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/RQCNQV.html">
+<meta property="og:title" content="Democratizing Experimentation: How GetYourGuide Built a Flexible and Scalable A/B Testing Platform - PyData Berlin 2025">
+<meta property="og:description" content="At GetYourGuide, we transformed experimentation from a centralized, closed system into a democratized, self-service platform accessible to all analysts, enginee... By Konrad Richter">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/RQCNQV.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/RQCNQV.html">
+<meta name="twitter:title" content="Democratizing Experimentation: How GetYourGuide Built a Flexible and Scalable A/B Testing Platform - PyData Berlin 2025">
+<meta name="twitter:description" content="At GetYourGuide, we transformed experimentation from a centralized, closed system into a democratized, self-service platform accessible to all analysts, enginee... By Konrad Richter">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/RQCNQV.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/RQCNQV.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Data Handling & Engineering</span>
+        
+        <h1>Democratizing Experimentation: How GetYourGuide Built a Flexible and Scalable A/B Testing Platform</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> GetYourGuide GmbH</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>At GetYourGuide, we transformed experimentation from a centralized, closed system into a democratized, self-service platform accessible to all analysts, engineers, and product teams. In this talk, we'll share our journey to empower individuals across the company to define metrics, create dimensions, and easily extend statistical methods. We'll discuss how we built a Python-based Analyzer toolkit enabling standardized, reusable calculations, and how our experimentation platform provides ad-hoc analytical capabilities through a flexible API. Attendees will gain practical insights into creating scalable, maintainable, and user-friendly experimentation infrastructure, along with access to our open-source sequential testing implementation.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>Familiarity with SQL, Python, and A/B testing concepts is recommended.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>Experimentation is essential for data-driven product development, but centralized experimentation systems often become bottlenecks, limiting innovation and velocity. At GetYourGuide, we faced this challenge and decided to democratize experimentation, enabling analysts and product teams across the company to define, run, and analyze experiments independently. In this session, we'll share practical insights from our journey toward democratization, focusing on technical implementation details and lessons learned.  </p>
+<p><strong>From Centralized to Decentralized Experimentation</strong><br />
+Initially, experimentation at GetYourGuide was centralized, limiting flexibility and slowing down decision-making. We recognized the need to empower individual contributors (ICs) by creating a self-service experimentation platform. We'll discuss the practical challenges we encountered, including managing complexity, maintaining consistency, and ensuring data quality across decentralized teams.  </p>
+<p><strong>Enabling Flexible Metric and Dimension Definitions</strong><br />
+To democratize experimentation effectively, we needed to empower analysts to define their own metrics and dimensions without heavy engineering involvement. We'll share how we designed a modular SQL-template approach, allowing analysts to quickly create, test, and deploy new definitions. We'll illustrate this approach with real-world examples, such as conversion rate, revenue per visitor, channel splits, and platform segmentation, demonstrating how this flexibility significantly accelerated experimentation velocity.  </p>
+<p><strong>Standardizing Statistical Calculations with the Analyzer Toolkit</strong><br />
+Our initial experimentation infrastructure relied heavily on Looker data models, which proved insufficient for complex statistical methods like sequential testing. To address this, we built a Python-based analysis package, the Analyzer, that standardized statistical calculations and provided reusable components. We'll explain how analysts leverage this toolkit to ensure consistency, accuracy, and extensibility of statistical methods. We'll also share how the Analyzer became a valuable resource beyond experimentation, supporting broader analytical use-cases across the organization.  </p>
+<p><strong>Batch Processing and API-Driven Experiment Results</strong><br />
+To ensure timely access to experiment results, we implemented a robust batch processing pipeline that pre-calculates daily experiment impressions, metrics, and dimensions. Additionally, we developed a flexible API layer to enable analysts to retrieve specific experiment results dynamically, without waiting for scheduled batch jobs. We'll discuss the technical architecture behind this dual approach, highlighting how it balances efficiency, reliability, and flexibility.  </p>
+<p><strong>Key Lessons and Takeaways</strong><br />
+Attendees will leave this session with practical insights into:<br />
+* Democratizing experimentation to accelerate innovation and velocity.<br />
+* Best practices for designing flexible, scalable, and maintainable experimentation infrastructure.<br />
+* Technical strategies for enabling self-service metric/dimension definitions, standardized statistical calculations, and extensible analytical capabilities.  </p>
+<p>We'll conclude by briefly outlining our future plans, including additional discriminators, advanced statistical methods, and further UI enhancements aimed at continuous democratization.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <div class="speaker-image" style="background: #e0e0e0; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 3em; color: #999;">K</span>
+            </div>
+            
+            <div class="speaker-info">
+                <h3>Konrad Richter</h3>
+                
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>
