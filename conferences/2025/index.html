@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PyData Berlin 2025 Sessions - Browse All Talks & Tutorials</title>
+<meta name="description" content="Explore 40+ sessions at PyData Berlin 2025. Browse talks and tutorials on AI, Data Science, Machine Learning, and more. Get your ticket now!">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/">
+<meta property="og:title" content="PyData Berlin 2025 Sessions - Browse All Talks & Tutorials">
+<meta property="og:description" content="Explore 40+ sessions at PyData Berlin 2025. Browse talks and tutorials on AI, Data Science, Machine Learning, and more. Get your ticket now!">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/">
+<meta name="twitter:title" content="PyData Berlin 2025 Sessions - Browse All Talks & Tutorials">
+<meta name="twitter:description" content="Explore 40+ sessions at PyData Berlin 2025. Browse talks and tutorials on AI, Data Science, Machine Learning, and more. Get your ticket now!">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .sessions-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .sessions-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    .session-card {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 2em;
+        margin-bottom: 2em;
+        transition: box-shadow 0.3s ease;
+    }
+    .session-card:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .session-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    .session-badges {
+        display: flex;
+        gap: 0.5em;
+        flex-wrap: wrap;
+    }
+    .track-badge {
+        display: inline-block;
+        padding: 0.3em 0.8em;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+        background: #6c757d;
+        color: white;
+    }
+    .session-type-badge {
+        display: inline-block;
+        padding: 0.3em 0.8em;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+        background: #6c757d;
+        color: white;
+    }
+    
+    .session-title {
+        margin: 0.5em 0;
+        font-size: 1.4em;
+    }
+    .session-title a {
+        color: #2e3842;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    .session-title a:hover {
+        border-bottom-color: #4a4e69;
+    }
+    .session-speakers {
+        color: #666;
+        margin-bottom: 1em;
+        font-weight: 600;
+    }
+    .session-abstract {
+        color: #333;
+        line-height: 1.6;
+    }
+    .filter-buttons {
+        margin-bottom: 2em;
+        text-align: center;
+    }
+    .filter-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5em 1em;
+        margin: 0.25em;
+        border: 2px solid #4a4e69;
+        background: white;
+        color: #4a4e69;
+        cursor: pointer;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        line-height: 1;
+    }
+    .filter-button:hover, .filter-button.active {
+        background: #4a4e69;
+        color: white;
+    }
+    .ticket-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+        color: white;
+        padding: 1em 2.5em;
+        font-size: 1.1em;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(238, 90, 111, 0.4);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+    }
+    .ticket-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(238, 90, 111, 0.5);
+        background: linear-gradient(135deg, #ff7b7b 0%, #ff6a7f 100%);
+        color: white;
+    }
+    .ticket-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.6s ease;
+    }
+    .ticket-button:hover::before {
+        left: 100%;
+    }
+    .ticket-icon {
+        font-size: 1.2em;
+        margin-right: 0.5em;
+        display: inline-block;
+        animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-5px);
+        }
+        60% {
+            transform: translateY(-3px);
+        }
+    }
+    @media screen and (max-width: 736px) {
+        .session-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .sessions-container {
+            padding: 1em;
+        }
+        .session-card {
+            padding: 1.5em;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="sessions-header">
+    <div class="inner">
+        <h1>PyData Berlin 2025 - Sessions</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Browse all talks and tutorials</p>
+        <div style="margin-top: 2em;">
+            <a href="https://pydata.org/berlin2025/tickets" class="ticket-button" target="_blank">
+                <span class="ticket-icon">🎫</span>
+                Get Your Ticket
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="sessions-container">
+        
+        <div class="filter-buttons">
+            <button class="filter-button active" onclick="filterSessions('all')">All Sessions</button>
+            
+            <button class="filter-button" onclick="filterSessions('community-and-diversity')">Community & Diversity</button>
+            
+            <button class="filter-button" onclick="filterSessions('computer-vision-(incl.-generative-ai-cv)')">Computer Vision (incl. Generative AI CV)</button>
+            
+            <button class="filter-button" onclick="filterSessions('data-handling-and-engineering')">Data Handling & Engineering</button>
+            
+            <button class="filter-button" onclick="filterSessions('education,-career-and-life')">Education, Career & Life</button>
+            
+            <button class="filter-button" onclick="filterSessions('ethics-and-privacy')">Ethics & Privacy</button>
+            
+            <button class="filter-button" onclick="filterSessions('generative-ai')">Generative AI</button>
+            
+            <button class="filter-button" onclick="filterSessions('infrastructure---hardware-and-cloud')">Infrastructure - Hardware & Cloud</button>
+            
+            <button class="filter-button" onclick="filterSessions('natural-language-processing-and-audio-(incl.-generative-ai-nlp)')">Natural Language Processing & Audio (incl. Generative AI NLP)</button>
+            
+            <button class="filter-button" onclick="filterSessions('pydata-and-scientific-libraries-stack')">PyData & Scientific Libraries Stack</button>
+            
+            <button class="filter-button" onclick="filterSessions('visualisation-and-jupyter')">Visualisation & Jupyter</button>
+            
+        </div>
+
+        <div id="sessions-list">
+            
+            <div class="session-card" data-track="community-and-diversity">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-community-and-diversity">
+                            Community & Diversity
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="RT8VVU.html">Building a Thriving Tech Ecosystem: The Role of PyLadies in Fostering Growth and Inclusion</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Gertrude Abagale
+                </div>
+                
+                <div class="session-abstract">
+                    The global tech ecosystem continues to grow, yet challenges like limited mentorship, a lack of role models, and fragmented community support hinder progress, especially for underrepresented groups. Py...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="community-and-diversity">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-community-and-diversity">
+                            Community & Diversity
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="WHPKVG.html">Not Just Code: Building Communities That Don’t Burn People Out</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: AISHAT MUIBUDEEN (Maya)
+                </div>
+                
+                <div class="session-abstract">
+                    Open source runs on passion, but passion is not a renewable resource. This talk will explore the hidden emotional and social costs of contributing to open-source projects. From burnout to invisibility...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="computer-vision-(incl.-generative-ai-cv)">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-computer-vision-incl-generative-ai-cv">
+                            Computer Vision (incl. Generative AI CV)
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="XNMYDK.html">Lane detection in self-driving using only NumPy</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Emma Saroyan
+                </div>
+                
+                <div class="session-abstract">
+                    Are you a scientist or a developer looking to understand how to use NumPy to solve computer vision problems?
+NumPy is a Python package that provides the multidimensional array object which you can us...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="computer-vision-(incl.-generative-ai-cv)">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-computer-vision-incl-generative-ai-cv">
+                            Computer Vision (incl. Generative AI CV)
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="SCQE8H.html">Spot the difference: 🕵️ using foundation models to monitor for change with satellite imagery 🛰️</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Ferdinand Schenck
+                </div>
+                
+                <div class="session-abstract">
+                    Energy infrastructure is vulnerable to damage by erosion or third party interference, which often takes the form of unsanctioned construction. In this talk we discuss our experiences using deep learni...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="HKMYHY.html">Bye-Bye Query Spaghetti: Write Queries You'll Actually Understand Using Pipelined SQL Syntax</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Tobias Lampert
+                </div>
+                
+                <div class="session-abstract">
+                    Are your SQL queries becoming tangled webs that are difficult to decipher, debug, and maintain? This talk explores how to write shorter, more debuggable, and extensible SQL code using **Pipelined SQL*...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Tutorial</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="W9Q7JY.html">Deep Dive into the Synthetic Data SDK</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Tobias Hann
+                </div>
+                
+                <div class="session-abstract">
+                    In January the Synthetic Data SDK was introduced and it quickly is gaining traction as becoming the standard Open Source library for creating privacy-preserving synthetic data. In this hands-on tutori...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="RQCNQV.html">Democratizing Experimentation: How GetYourGuide Built a Flexible and Scalable A/B Testing Platform</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Konrad Richter
+                </div>
+                
+                <div class="session-abstract">
+                    At GetYourGuide, we transformed experimentation from a centralized, closed system into a democratized, self-service platform accessible to all analysts, engineers, and product teams. In this talk, we'...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="GQBX3J.html">Docling: Get your documents ready for gen AI</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Michele Dolfi, Christoph Auer
+                </div>
+                
+                <div class="session-abstract">
+                    Docling, an open source package, is rapidly becoming the de facto standard for document parsing and export in the Python community. Earning close to 30,000 GitHub in less than one year and now part of...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="8UJA37.html">Exploring Millions of High-dimensional Datapoints in the Browser for Early Drug Discovery</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Tim Tenckhoff, Matthias Orlowski
+                </div>
+                
+                <div class="session-abstract">
+                    The visual exploration of large, high-dimensional datasets presents significant challenges in data processing, transfer, and rendering for engineering in various industries. This talk will explore inn...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Talk (long)</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="ZXTLEW.html">Forget the Cloud: Building Lean Batch Pipelines from TCP Streams with Python and DuckDB</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Orell Garten
+                </div>
+                
+                <div class="session-abstract">
+                    Many industrial and legacy systems still push critical data over TCP streams. Instead of reaching for heavyweight cloud platforms, you can build fast, lean batch pipelines on-prem using Python and Duc...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="WGJJQN.html">How We Automate Chaos: Agentic AI and Community Ops at PyCon DE & PyData</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Alexander C.S. Hendorf
+                </div>
+                
+                <div class="session-abstract">
+                    Using AI agents and automation, PyCon DE & PyData volunteers have transformed chaos into streamlined conference ops. From YAML files to LLM-powered assistants, they automate speaker logistics, FAQs, v...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Tutorial</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="WXPVCS.html">More than DataFrames: Data Pipelines with the Swiss Army Knife DuckDB</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Mehdi Ouazza
+                </div>
+                
+                <div class="session-abstract">
+                    Most Python developers reach for Pandas or Polars when working with tabular data—but DuckDB offers a powerful alternative that’s more than just another DataFrame library. In this tutorial, you’ll lear...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Tutorial</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="B3STGX.html">See only what you are allowed to see: Fine-Grained Authorization</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Maria Knorps
+                </div>
+                
+                <div class="session-abstract">
+                    Managing who can see or do what with your data is a fundamental challenge, especially as applications and data grow in complexity. Traditional role-based systems often lack the granularity needed for ...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="data-handling-and-engineering">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-data-handling-and-engineering">
+                            Data Handling & Engineering
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="KCPVYN.html">🛰️➡️🧑‍💻: Streamlining Satellite Data for Analysis-Ready Outputs</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Vinayak Nair
+                </div>
+                
+                <div class="session-abstract">
+                    I will share how our team built an end-to-end system to transform raw satellite imagery into analysis-ready datasets for use cases like vegetation monitoring, deforestation detection, and identifying ...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="education,-career-and-life">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-education,-career-and-life">
+                            Education, Career & Life
+                        </span>
+                        
+                        <span class="session-type-badge">Tutorial</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="GBVFJ8.html">Probably Fun: Games to teach Machine Learning</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Kristian Rother, Shreyaasri Prakash
+                </div>
+                
+                <div class="session-abstract">
+                    In this tutorial, you will play several games that can be used to teach machine learning concepts. Each game can be played in big and small groups. Some involve hands- on material such as cards, some ...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="ethics-and-privacy">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-ethics-and-privacy">
+                            Ethics & Privacy
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="LZYBVH.html">The EU AI Act: Unveiling Lesser-Known Aspects, Implementation Entities, and Exemptions</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Adrin
+                </div>
+                
+                <div class="session-abstract">
+                    The EU AI Act is already partly in effect which prohibits certain AI systems. After going through the basics, we cover some of the less talked about aspects of the Act, introducing entities involved i...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="ethics-and-privacy">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-ethics-and-privacy">
+                            Ethics & Privacy
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="JE8YJT.html">What’s Really Going On in Your Model? A Python Guide to Explainable AI</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Yashasvi Misra
+                </div>
+                
+                <div class="session-abstract">
+                    As machine learning models become more complex, understanding why they make certain predictions is becoming just as important as the predictions themselves. Whether you're dealing with business stakeh...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="generative-ai">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-generative-ai">
+                            Generative AI
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="X3UYBK.html">A quarter decade of learnings from scaling RAG to millions of users</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Jakob Pörschmann
+                </div>
+                
+                <div class="session-abstract">
+                    Drawing on experience at Google designing 50+ RAG applications rolled out to millions of users, this talk presents a practical RAG design blueprint. We'll dissect key decision points for building robu...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="generative-ai">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-generative-ai">
+                            Generative AI
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="JUQK3Y.html">Building Intelligent Systems with Agentic AI and Knowledge Graphs</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Emily White, Vinay Babu
+                </div>
+                
+                <div class="session-abstract">
+                    This talk explores how we're applying agentic AI, ontology, and GraphRAG to tackle some complex data integration challenges in the trucking and logistics industry. We'll detail the development of a sy...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="generative-ai">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-generative-ai">
+                            Generative AI
+                        </span>
+                        
+                        <span class="session-type-badge">Tutorial</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="GZUXGZ.html">Building an AI Agent for Natural Language to SQL Query Execution on Live Databases</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Cainã Max Couto da Silva
+                </div>
+                
+                <div class="session-abstract">
+                    This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes them on live databases, and returns coheren...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="generative-ai">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-generative-ai">
+                            Generative AI
+                        </span>
+                        
+                        <span class="session-type-badge">Talk (long)</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="3LDDAB.html">From Manual to LLMs: Scaling Product Categorization</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Giampaolo Casolla, Ansgar Grüne
+                </div>
+                
+                <div class="session-abstract">
+                    How to use LLMs to categorize hundreds of thousands of products into 1,000 categories at scale? Learn about our journey from manual/rule-based methods, via fine-tuned semantic models, to a robust mult...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="generative-ai">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-generative-ai">
+                            Generative AI
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="JEKYLT.html">Navigating healthcare scientific knowledge:building AI agents for accurate biomedical data retrieval</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Laura
+                </div>
+                
+                <div class="session-abstract">
+                    With a focus on healthcare applications where accuracy is non negotiable, this talk highlights challenges and delivers practical insights on building AI agents which query complex biological and scien...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="generative-ai">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-generative-ai">
+                            Generative AI
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="NUNXEV.html">One API to Rule Them All? LiteLLM in Production</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Alina Dallmann
+                </div>
+                
+                <div class="session-abstract">
+                    Using LiteLLM in a Real-World RAG System: What Worked and What Didn’t
+
+LiteLLM provides a unified interface to work with multiple LLM providers—but how well does it hold up in practice? In this talk...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="infrastructure---hardware-and-cloud">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-infrastructure---hardware-and-cloud">
+                            Infrastructure - Hardware & Cloud
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="KKWBKK.html">Edge of Intelligence: The State of AI in Browsers</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Johannes Kolbe
+                </div>
+                
+                <div class="session-abstract">
+                    API calls suck! Okay, not all of them. But building your AI features reliant on third party APIs can bring a lot of trouble. In this talk you'll learn how to use web technologies to become more indepe...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="infrastructure---hardware-and-cloud">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-infrastructure---hardware-and-cloud">
+                            Infrastructure - Hardware & Cloud
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="XE9F7X.html">Flying Beyond Keywords: Our Aviation Semantic Search Journey</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Dat Tran, Dennis Schmidt
+                </div>
+                
+                <div class="session-abstract">
+                    In aviation, search isn’t simple—people use abbreviations, slang, and technical terms that make exact matching tricky. We started with just Postgres, aiming for something that worked. Over time, we up...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="infrastructure---hardware-and-cloud">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-infrastructure---hardware-and-cloud">
+                            Infrastructure - Hardware & Cloud
+                        </span>
+                        
+                        <span class="session-type-badge">Talk (long)</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="KEJJSP.html">Template-based web app and deployment pipeline at an enterprise-ready level on Azure</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Johannes Schöck
+                </div>
+                
+                <div class="session-abstract">
+                    A practical deep-dive into Azure DevOps pipelines, the Azure CLI, and how to combine pipeline, bicep, and python templates to build a fully automated web app deployment system. Deploying a new proof o...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="natural-language-processing-and-audio-(incl.-generative-ai-nlp)">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-natural-language-processing-and-audio-incl-generative-ai-nlp">
+                            Natural Language Processing & Audio (incl. Generative AI NLP)
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="WQ9EHR.html">Bridging Custom Schemas and Wikidata with an LLM-Assisted Interactive Python Tool</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Sankalp Gilda, Ph.D.
+                </div>
+                
+                <div class="session-abstract">
+                    Many projects build knowledge graphs with custom schemas but struggle to align them with standard hubs like Wikidata. Manual mapping is tedious and error-prone, while fully automated methods often lac...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="natural-language-processing-and-audio-(incl.-generative-ai-nlp)">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-natural-language-processing-and-audio-incl-generative-ai-nlp">
+                            Natural Language Processing & Audio (incl. Generative AI NLP)
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="WMRLUD.html">From Months to Minutes: Accelerating Compliance Reviews with GenAI</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Elizaveta Zinovyeva
+                </div>
+                
+                <div class="session-abstract">
+                    Transform time-consuming document compliance reviews into automated workflows with Generative AI. Through live demonstrations, learn how to build systems that extract policies from unstructured data, ...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="pydata-and-scientific-libraries-stack">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-pydata-and-scientific-libraries-stack">
+                            PyData & Scientific Libraries Stack
+                        </span>
+                        
+                        <span class="session-type-badge">Tutorial</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="GRZ3RG.html">A Beginner's Guide to State Space Modeling</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Alexandre Andorra, Jesse Grabowski
+                </div>
+                
+                <div class="session-abstract">
+                    **State Space Models** (SSMs) are powerful tools for time series analysis, widely used in finance, economics, ecology, and engineering. They allow researchers to encode structural behavior into time s...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="pydata-and-scientific-libraries-stack">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-pydata-and-scientific-libraries-stack">
+                            PyData & Scientific Libraries Stack
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="YKSHVM.html">Advanced Polars: Lazy Queries and Streaming Mode</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Emanuele Fabbiani
+                </div>
+                
+                <div class="session-abstract">
+                    Do you find yourself struggling with Pandas' limitations when handling **massive datasets** or **real-time data streams**?
+
+Discover **Polars**, the lightning-fast DataFrame library built in Rust. T...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="pydata-and-scientific-libraries-stack">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-pydata-and-scientific-libraries-stack">
+                            PyData & Scientific Libraries Stack
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="GPZPFP.html">Building Reactive Data Apps with Shinylive and WebAssembly</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Christoph Scheuch
+                </div>
+                
+                <div class="session-abstract">
+                    WebAssembly is reshaping how Python applications can be delivered - allowing fully interactive apps that run directly in the browser, without a traditional backend server. In this talk, I’ll demonstra...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="pydata-and-scientific-libraries-stack">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-pydata-and-scientific-libraries-stack">
+                            PyData & Scientific Libraries Stack
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="HUNUEB.html">Causal Inference in Network Structures: Lessons learned From Financial Services</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Danial Senejohnny
+                </div>
+                
+                <div class="session-abstract">
+                    *Causal inference techniques are crucial to understanding the impact of actions on outcomes.* *This talk shares lessons learned from applying these techniques in real-world scenarios where standard me...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="pydata-and-scientific-libraries-stack">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-pydata-and-scientific-libraries-stack">
+                            PyData & Scientific Libraries Stack
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="GW9EXL.html">Consumer Choice Models with PyMC Marketing</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Nathaniel Forde
+                </div>
+                
+                <div class="session-abstract">
+                    Consumer choice models are an important part of product innovation and market strategy. In this talk we'll see how they can be used to learn about substitution goods and market shares in competitive m...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="pydata-and-scientific-libraries-stack">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-pydata-and-scientific-libraries-stack">
+                            PyData & Scientific Libraries Stack
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="3XMJM3.html">Risk Budget Optimization for Causal Mix Models</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Carlos Trujillo
+                </div>
+                
+                <div class="session-abstract">
+                    Traditional budget planners chase the highest predicted return and hope for the best. Bayesian models take the opposite route: they quantify uncertainty first, then let us optimize budgets with that u...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="pydata-and-scientific-libraries-stack">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-pydata-and-scientific-libraries-stack">
+                            PyData & Scientific Libraries Stack
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="DBL9PQ.html">The Importance and Elegance of Polars Expressions</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Jeroen Janssens
+                </div>
+                
+                <div class="session-abstract">
+                    Polars is known for its speed, but its elegance comes from its use of expressions. In this talk, we’ll explore how Polars expressions work and why they are key to efficient and elegant data manipulati...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="visualisation-and-jupyter">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-visualisation-and-jupyter">
+                            Visualisation & Jupyter
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="VBCU9H.html">Beyond Linear Funnels: Visualizing Conditional User Journeys with Python</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Yaseen Esmaeelpour
+                </div>
+                
+                <div class="session-abstract">
+                    Optimizing user funnels is a common task for data analysts and data scientists. Funnels are not always linear in the real world. often, the next step depends on earlier responses or actions. This resu...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="visualisation-and-jupyter">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-visualisation-and-jupyter">
+                            Visualisation & Jupyter
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="SB88M7.html">Beyond the Black Box: Interpreting ML models with SHAP</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Avik Basu
+                </div>
+                
+                <div class="session-abstract">
+                    As machine learning models become more accurate and complex, explainability remains essential. Explainability helps not just with trust and transparency but also with generating actionable insights an...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="visualisation-and-jupyter">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-visualisation-and-jupyter">
+                            Visualisation & Jupyter
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="VURY38.html">Building an A/B Testing Framework with NiceGUI</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Wessel van de Goor
+                </div>
+                
+                <div class="session-abstract">
+                    NiceGUI is a Python-based web UI framework that enables developers to build interactive web applications without using JavaScript. In this talk, I’ll share how my team used NiceGUI to create an intern...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="visualisation-and-jupyter">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="track-badge track-visualisation-and-jupyter">
+                            Visualisation & Jupyter
+                        </span>
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="QMPX9V.html">Democratizing Digital Maps: How Protomaps Changes the Game</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Veit Schiele
+                </div>
+                
+                <div class="session-abstract">
+                    Digital mapping has long been dominated by commercial providers, creating barriers of cost, complexity, and privacy concerns. This talk introduces Protomaps, an open-source project that reimagines how...
+                </div>
+            </div>
+            
+            <div class="session-card" data-track="none">
+                <div class="session-header-row">
+                    <div class="session-badges">
+                        
+                        <span class="session-type-badge">Talk</span>
+                    </div>
+                </div>
+                
+                <h2 class="session-title">
+                    <a href="BCGJQB.html">Scaling Probabilistic Models with Variational Inference</a>
+                </h2>
+                
+                <div class="session-speakers">
+                    By: Dr. Juan Orduz
+                </div>
+                
+                <div class="session-abstract">
+                    This talk presents variational inference as a tool to scale probabilistic models. We describe practical examples with NumPyro and PyMC to demonstrate this method, going through the main concepts and d...
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+<script>
+function filterSessions(track) {
+    const cards = document.querySelectorAll('.session-card');
+    const buttons = document.querySelectorAll('.filter-button');
+    
+    // Update active button
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.innerText.toLowerCase().includes(track.replace('-', ' ')) || 
+            (track === 'all' && btn.innerText === 'All Sessions')) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Show/hide cards
+    cards.forEach(card => {
+        if (track === 'all') {
+            card.style.display = 'block';
+        } else {
+            const cardTrack = card.getAttribute('data-track');
+            if (cardTrack && cardTrack.includes(track)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+    });
+}
+</script>
+
+</body>
+</html>

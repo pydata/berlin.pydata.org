@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bye-Bye Query Spaghetti: Write Queries You'll Actually Understand Using Pipelined SQL Syntax - PyData Berlin 2025</title>
+<meta name="description" content="Are your SQL queries becoming tangled webs that are difficult to decipher, debug, and maintain? This talk explores how to write shorter, more debuggable, and ex... By Tobias Lampert">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/HKMYHY.html">
+<meta property="og:title" content="Bye-Bye Query Spaghetti: Write Queries You'll Actually Understand Using Pipelined SQL Syntax - PyData Berlin 2025">
+<meta property="og:description" content="Are your SQL queries becoming tangled webs that are difficult to decipher, debug, and maintain? This talk explores how to write shorter, more debuggable, and ex... By Tobias Lampert">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/HKMYHY.html">
+<meta name="twitter:title" content="Bye-Bye Query Spaghetti: Write Queries You'll Actually Understand Using Pipelined SQL Syntax - PyData Berlin 2025">
+<meta name="twitter:description" content="Are your SQL queries becoming tangled webs that are difficult to decipher, debug, and maintain? This talk explores how to write shorter, more debuggable, and ex... By Tobias Lampert">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/HKMYHY.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Data Handling & Engineering</span>
+        
+        <h1>Bye-Bye Query Spaghetti: Write Queries You'll Actually Understand Using Pipelined SQL Syntax</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> Lotum GmbH</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>Are your SQL queries becoming tangled webs that are difficult to decipher, debug, and maintain? This talk explores how to write shorter, more debuggable, and extensible SQL code using **Pipelined SQL**, an alternative syntax where queries are written as **a series of orthogonal, understandable steps**. We'll survey which databases and query engines currently support pipelined SQL natively or through extensions, and how it can be used on any platform by compiling pipelined SQL to any SQL dialect using open-source tools. A series of real-world examples, comparing traditional and pipelined SQL syntax side by side for a variety of use cases, will show you how to simplify existing code and make complex data transformations intuitive and manageable.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>The talk is best suited for those who have some practical experience with SQL and can recognize the challenges of managing complex query logic in traditional SQL syntax. Attendees should be comfortable with fundamental SQL concepts (SELECT, WHERE, GROUP BY, JOINs) and have experience writing SQL queries. While not necessarily experts, attendees who have encountered or wrestled with complex SQL queries, such as those involving deeply nested subqueries or extensive Common Table Expressions (CTEs), will better appreciate the problems Pipelined SQL aims to solve and the advantages it offers.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>This session introduces Pipelined SQL, an alternative syntax for writing complex data queries as a clear, sequential flow of manageable transformations within a single query.</p>
+<p>Traditional SQL combines filtering (WHERE), aggregation (GROUP BY), and projection (SELECT expressions) within a single, monolithic block. This can make it challenging to discern individual data transformations or modify one aspect without impacting others. Pipelined SQL, in contrast, encourages building queries like an assembly line. You'll learn to structure your query logic so that each step performs a specific transformation and cleanly passes its result to the next. This pipelined approach, moving away from deeply nested subqueries or sprawling Common Table Expressions (CTEs), leads to queries that are more readable by easily following the logic from start to finish. As an added benefit, the resulting code is simpler to debug and also easily extendable by additional transformation steps.</p>
+<p>The talk will explain the core concepts of Pipelined SQL, how it differs from traditional SQL, what its main advantages over traditional SQL are. Native support for pipelined syntax is steadily growing across many modern databases, query engines and cloud data warehouses. We will explore the landscape of emerging dialects and identify which platforms currently offer native support or extensions for this powerful syntax. The session also covers a range of open-source tools that can compile such pipelined query code into any traditional SQL dialect, making this approach suitable for almost any platform.</p>
+<p>Through practical, real-world examples using BigQuery's pipe syntax, you'll see side-by-side comparisons demonstrating how Pipelined SQL can drastically reduce complexity and improve clarity for common data manipulation tasks. Prepare for genuine 'a-ha!' moments as you discover how Pipelined SQL offers refreshingly simple approaches to tasks that usually require convoluted traditional SQL.</p>
+<p>This session is ideal for data analysts, scientists, engineers, and anyone with basic SQL knowledge who wants to write cleaner, more robust, and more maintainable queries. You'll leave with a solid understanding of Pipelined SQL's benefits and practical knowledge to start simplifying your own SQL workflows.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/DSC_0008_DxO4_improved_1_bx37xbP.png" alt="Tobias Lampert" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Tobias Lampert</h3>
+                
+                <p><strong>Analytics Engineer</strong></p>
+                
+                
+                <p>An accomplished technical leader, Tobias brings over two decades of experience in software development, complemented by profound expertise in Data Science and Data Engineering. His career has focused on the end-to-end design and implementation of complex data-intensive applications, spanning the full lifecycle from data ingestion to deployment. In his current role at Lotum he is tackling a data volume of several hundred million events from mobile games per day.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

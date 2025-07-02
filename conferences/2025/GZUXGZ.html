@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Building an AI Agent for Natural Language to SQL Query Execution on Live Databases - PyData Berlin 2025</title>
+<meta name="description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes the... By Cainã Max Couto da Silva">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/GZUXGZ.html">
+<meta property="og:title" content="Building an AI Agent for Natural Language to SQL Query Execution on Live Databases - PyData Berlin 2025">
+<meta property="og:description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes the... By Cainã Max Couto da Silva">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/GZUXGZ.html">
+<meta name="twitter:title" content="Building an AI Agent for Natural Language to SQL Query Execution on Live Databases - PyData Berlin 2025">
+<meta name="twitter:description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes the... By Cainã Max Couto da Silva">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/GZUXGZ.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Generative AI</span>
+        
+        <h1>Building an AI Agent for Natural Language to SQL Query Execution on Live Databases</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Tutorial</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> UW-Madison</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes them on live databases, and returns coherent responses. Using the Retrieval-Augmented Generation (RAG) approach with modern LLMs, participants will learn how to construct robust NL2SQL systems that understand database schema, respect database constraints, and generate accurate SQL. By the end of this 4-hour session, attendees will have created a working prototype using the Brazilian E-Commerce dataset that they can adapt to their own data sources.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>- Python programming experience
+- Basic understanding of API interactions
+- Basic familiarity with SQL and database management
+- Laptop with [Git](https://git-scm.com/) and [UV](https://github.com/astral-sh/uv), UV, and a Python IDE (I recommend VSCode) installed.
+
+No prior experience with LLMs, RAG, or advanced NLP is required.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <h3>Overview</h3>
+<p>Natural Language to SQL systems enable non-technical users to access database insights. This tutorial bridges the gap between theoretical understanding and practical implementation through a RAG-based approach.</p>
+<p>Participants will build an AI agent that can:<br />
+1. Ingest and understand database schemas<br />
+2. Retrieve relevant context about tables and relationships<br />
+3. Generate accurate SQL from natural language questions<br />
+4. Execute queries safely on live databases<br />
+5. Present results in an understandable format</p>
+<p>We'll use the Kaggle dataset "<a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce">Brazilian E-Commerce dataset by Olist</a>" as our working example, demonstrating how to handle multiple tables with complex relationships. This dataset will be hosted on an EC2 AWS instance for live interaction during the tutorial.</p>
+<p>The tutorial balances theoretical foundations with hands-on practice. Participants will start from a repository with backbone code and implement the key components during the session. By the end, attendees will have a working prototype they can adapt to their own datasets.</p>
+<h3>Tools and Frameworks</h3>
+<p>This tutorial will leverage modern tools and frameworks for efficient development:</p>
+<p><strong>Development Tools:</strong><br />
+- pyproject.toml for standardized project configuration<br />
+- UV for fast, reliable package management<br />
+- Ruff for comprehensive Python linting and formatting<br />
+- YAML for configuration management</p>
+<p><strong>AI and RAG Frameworks:</strong><br />
+- LangChain's agent framework for orchestration<br />
+- OpenAI models (GPT-4) with examples of alternatives<br />
+- Vector databases (pgvector) for efficient retrieval</p>
+<p><strong>Database Tools:</strong><br />
+- SQLAlchemy for database interactions<br />
+- pandas for data manipulation and analysis<br />
+- PostgreSQL as the database engine for the live dataset</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/uw_profile_picture_Efgp8uf.jpg" alt="Cainã Max Couto da Silva" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Cainã Max Couto da Silva</h3>
+                
+                <p><strong>Postdoctoral Data Scientist</strong></p>
+                
+                
+                <p>I’m a data scientist and AI engineer with 10+ years of experience across academic research and industry, building GenAI and machine learning solutions for research labs, startups, and Fortune 500 companies. I’m also a passionate educator, contributing to data training programs as a professor and consultant, and an active open-source contributor and speaker at conferences like SciPy and PyData.</p>
+                
+                
+                <div class="social-links">
+                    
+                    
+                    
+                    
+                    
+                    <a href="cmcoutosilva" target="_blank" class="icon fa-twitter" title="X/Twitter"></a>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

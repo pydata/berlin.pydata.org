@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A Beginner's Guide to State Space Modeling - PyData Berlin 2025</title>
+<meta name="description" content="**State Space Models** (SSMs) are powerful tools for time series analysis, widely used in finance, economics, ecology, and engineering. They allow researchers t... By Alexandre Andorra, Jesse Grabowski">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/GRZ3RG.html">
+<meta property="og:title" content="A Beginner's Guide to State Space Modeling - PyData Berlin 2025">
+<meta property="og:description" content="**State Space Models** (SSMs) are powerful tools for time series analysis, widely used in finance, economics, ecology, and engineering. They allow researchers t... By Alexandre Andorra, Jesse Grabowski">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/GRZ3RG.html">
+<meta name="twitter:title" content="A Beginner's Guide to State Space Modeling - PyData Berlin 2025">
+<meta name="twitter:description" content="**State Space Models** (SSMs) are powerful tools for time series analysis, widely used in finance, economics, ecology, and engineering. They allow researchers t... By Alexandre Andorra, Jesse Grabowski">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/pydata-berlin-2025-default.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/GRZ3RG.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">PyData & Scientific Libraries Stack</span>
+        
+        <h1>A Beginner's Guide to State Space Modeling</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Tutorial</p>
+    </div>
+</section>
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Novice</span>
+            
+            <span><strong>Company/Institute:</strong> Miami Marlins</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>**State Space Models** (SSMs) are powerful tools for time series analysis, widely used in finance, economics, ecology, and engineering. They allow researchers to encode structural behavior into time series models, including *trends*, *seasonality*, *autoregression*, and *irregular fluctuations*, to name just a few. Many workhorse time series models, including ARIMA, VAR, and ETS, are special cases of the general statespace framework.  
+
+In this practical, hands-on tutorial, attendees will **learn how to leverage PyMC's new state-space modeling** capabilities (`pymc_extras.statespace`) to build, fit, and interpret Bayesian state space models.
+
+Starting from fundamental concepts, we'll **explore several real-world use cases**, demonstrating how SSMs help tackle common time series challenges, such as handling missing observations, integrating external regressors, and generating forecasts.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>Prior experience with PyMC is not required but will be beneficial.
+
+Optional Additional Resources:
+- [Introduction to PyMC state space module](https://www.youtube.com/watch?v=G9VWXZdbtKQ)
+- [Podcast episode on PyMC's state space module](https://learnbayesstats.com/episode/124-state-space-models-structural-time-series-jesse-grabowski)
+- [PyMC State Space Module GitHub Repository](https://github.com/pymc-devs/pymc-extras/tree/main/pymc_extras/statespace)</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>State Space Models offer <strong>a structured yet flexible framework for time series analysis</strong>. They elegantly handle latent processes like trends, seasonality, and noisy observations, making them particularly valuable in real-world applications.</p>
+<p>We'll start with a brief overview of the theory behind SSMs, followed by practical examples where participants will:</p>
+<ul>
+<li><strong>Understand the components of SSMs</strong>, including observation and state equations.</li>
+<li><strong>Learn how to specify and fit SSMs</strong> using PyMC's state space module.</li>
+<li>Implement a <strong>modeling workflow using a survey data example</strong>, showing how to use SSMs to model the data and generate predictions.</li>
+<li><strong>Explore advanced topics</strong> such as incorporating external regressors, generating forecasts or building custom models.</li>
+</ul>
+<h3>Target Audience</h3>
+<p>This tutorial is aimed at data scientists, statisticians, and data analysts with a basic understanding of statistics and Python, who are interested in expanding their toolkit with Bayesian time series methods. Prior experience with PyMC is not required but will be beneficial.</p>
+<h3>Takeaways</h3>
+<p>By the end of this tutorial, attendees will:</p>
+<ul>
+<li>Understand the <strong>theoretical foundations</strong> of State Space Models.</li>
+<li>Be able to <strong>implement common SSMs</strong> (local level, trend, and seasonal models) in PyMC.</li>
+<li><strong>Evaluate and interpret</strong> Bayesian state space models using PyMC.</li>
+<li><strong>Appreciate practical scenarios</strong> where SSMs outperform traditional time series approaches. </li>
+</ul>
+<h3>Background Knowledge Required</h3>
+<p>Basic understanding of probability and statistics, and familiarity with Python. Prior experience with PyMC is not required but will be beneficial.</p>
+<h3>Materials Distribution</h3>
+<p>All tutorial materials, including notebooks and datasets, will be made available via a GitHub repository.</p>
+<h2>Outline</h2>
+<p><strong>0 - 10 min: Introduction to State Space Models</strong></p>
+<ul>
+<li>What are SSMs, and why use them?</li>
+</ul>
+<p><strong>10 - 25 min: State Space Model Fundamentals</strong></p>
+<ul>
+<li>Observation and state equations.</li>
+<li>Latent states, Kalman filters, and smoothing in Bayesian frameworks.</li>
+</ul>
+<p><strong>25 - 55 min: Implementing SSMs with PyMC (Hands-On)</strong></p>
+<ul>
+<li>Setting up a local-level model in PyMC.</li>
+<li>Extending models to incorporate trends and seasonality.</li>
+<li>Posterior inference: interpreting results and uncertainty.</li>
+</ul>
+<p><strong>55 - 75 min: Advanced State Space Modeling (Hands-On)</strong></p>
+<ul>
+<li>Dealing with missing data and irregular intervals.</li>
+<li>Adding external covariates (regression components).</li>
+<li>Model diagnostics and posterior predictive checks.</li>
+</ul>
+<p><strong>75 - 85 min: Real-world Application Case Study</strong></p>
+<ul>
+<li>Demonstrating an end-to-end modeling example with real data.</li>
+<li>Discussing best practices for practical time series modeling.</li>
+</ul>
+<p><strong>85 - 90 min: Wrap-up and Interactive Q&amp;A</strong></p>
+<ul>
+<li>Open floor for questions and further resources.</li>
+</ul>
+<hr />
+<h2>Additional Resources</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=G9VWXZdbtKQ">Introduction to PyMC state space module</a></li>
+<li><a href="https://learnbayesstats.com/episode/124-state-space-models-structural-time-series-jesse-grabowski">Podcast episode on PyMC's state space module</a></li>
+<li><a href="https://github.com/pymc-devs/pymc-extras/tree/main/pymc_extras/statespace">PyMC State Space Module GitHub Repository</a></li>
+</ul>
+<p>We believe this tutorial will empower participants with practical knowledge of state space modeling in PyMC, enabling them to effectively analyze complex time series data using Bayesian approaches.</p>
+        </div>
+
+        <h2>Speakers</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/Alexandre_Andorra_20250128_oXO07Aa.JPG" alt="Alexandre Andorra" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Alexandre Andorra</h3>
+                
+                <p><strong>Senior Applied Scientist</strong></p>
+                
+                
+                <p>⚾ Senior Applied Scientist @ Miami Marlins
+🎙️ Creator @ LearnBayesStats Podcast
+📊 Cofounder @ PyMC Labs
+👨‍🏫 Teacher @ Intuitive Bayes</p>
+                
+                
+                <div class="social-links">
+                    
+                    
+                    
+                    
+                    <a href="https://mstdn.science/@LearnBayesStats" target="_blank" class="icon fa-mastodon" title="Mastodon"></a>
+                    
+                    
+                    
+                    <a href="https://bsky.app/profile/alex-andorra.bsky.social" target="_blank" class="icon fa-cloud" title="Bluesky"></a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="speaker-card">
+            
+            <img src="https://cfp.pydata.org/media/avatars/me_X1eUCJ0.jpg" alt="Jesse Grabowski" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Jesse Grabowski</h3>
+                
+                
+                <p>Jesse Grabowski is a PhD candidate at Paris 1 Pantheon-Sorbonne. He is also a principal data scientist at PyMC labs, and a core developer of PyMC, Pytensor, and related packages. His area of research includes time series modeling, macroeconomics, and finance.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>
