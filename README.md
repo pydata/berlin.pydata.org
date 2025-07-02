@@ -23,15 +23,38 @@ PyData Berlin is a community of users and developers of open-source data tools, 
 - Social media links for staying connected.
 
 ## Project Structure
- ├── index.html # Main landing page 
- ├── blog/ # Blog posts
- ├── conferences/ # Conference pages 
- ├── css/ # Stylesheets 
- ├── images/ # Images used on the website 
- ├── js/ # JavaScript files 
- ├── feed.xml # RSS feed 
- ├── code-of-conduct/ # Code of Conduct in multiple languages 
- └── cdn-cgi/ # Cloudflare scripts
+```
+├── index.html          # Main landing page
+├── blog/              # Blog posts
+├── conferences/       # Conference pages
+├── css/              # Stylesheets
+├── images/           # Images used on the website
+├── js/               # JavaScript files
+├── scripts/          # Python scripts for content generation
+├── feed.xml          # RSS feed
+├── code-of-conduct/  # Code of Conduct in multiple languages
+└── cdn-cgi/          # Cloudflare scripts
+```
+
+### Scripts Directory
+
+The `/scripts` directory contains Python utilities for generating conference content:
+
+- **`generate_sessions.py`** - Generates individual HTML pages for conference sessions from JSON data
+- **`generate_social_cards.py`** - Creates social media card images for each session with speaker photos and session details
+- **`models.py`** - Pydantic models for type-safe data handling
+- **`templates/`** - Jinja2 templates for HTML generation
+
+These scripts use Python with `uv` as the package manager. To run them:
+
+```bash
+cd scripts
+uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+uv pip install pydantic markdown jinja2 pillow requests pyyaml
+python generate_sessions.py
+python generate_social_cards.py
+```
 
 ## Development
 
