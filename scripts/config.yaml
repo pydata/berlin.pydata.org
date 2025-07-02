@@ -1,0 +1,20 @@
+# Configuration for generate_sessions.py
+# Paths are relative to the berlin.pydata.org directory root.
+
+base_url: "https://berlin.pydata.org"
+
+input_files:
+  # downloads from pretalx, see expected attributes in docs
+  sessions: "../_data/berlin2025_sessions.json"
+  speakers: "../_data/berlin2025_speakers.json"
+
+templates:
+  # Assuming templates are in the same directory as the script
+  session: "scripts/templates/session_template.html"
+  index: "scripts/templates/index_template.html"
+
+output:
+  # requires restructuring for future conferences, work-around for 2025
+  sessions_dir: "conferences/2025"
+  social_images_dir: "images/social"
+  default_social_image: "images/social/social_card_default.png"

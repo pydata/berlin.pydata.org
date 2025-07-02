@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Spot the difference: 🕵️ using foundation models to monitor for change with satellite imagery 🛰️ - PyData Berlin 2025</title>
-<meta name="description" content="Energy infrastructure is vulnerable to damage by erosion or third party interference, which often takes the form of unsanctioned construction. In this talk we d... By Ferdinand Schenck">
+<title>{{ session.title }} - PyData Berlin 2025</title>
+<meta name="description" content="{{ session.abstract[:160] }}... By {{ session.speaker_names|join(', ') }}">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/SCQE8H.html">
-<meta property="og:title" content="Spot the difference: 🕵️ using foundation models to monitor for change with satellite imagery 🛰️ - PyData Berlin 2025">
-<meta property="og:description" content="Energy infrastructure is vulnerable to damage by erosion or third party interference, which often takes the form of unsanctioned construction. In this talk we d... By Ferdinand Schenck">
-<meta property="og:image" content="https://berlin.pydata.org/images/social/SCQE8H.png">
+<meta property="og:url" content="{{ base_url }}/conferences/2025/{{ session.id }}.html">
+<meta property="og:title" content="{{ session.title }} - PyData Berlin 2025">
+<meta property="og:description" content="{{ session.abstract[:160] }}... By {{ session.speaker_names|join(', ') }}">
+<meta property="og:image" content="{{ social_image_url }}">
 <meta property="og:site_name" content="PyData Berlin">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/SCQE8H.html">
-<meta name="twitter:title" content="Spot the difference: 🕵️ using foundation models to monitor for change with satellite imagery 🛰️ - PyData Berlin 2025">
-<meta name="twitter:description" content="Energy infrastructure is vulnerable to damage by erosion or third party interference, which often takes the form of unsanctioned construction. In this talk we d... By Ferdinand Schenck">
-<meta name="twitter:image" content="https://berlin.pydata.org/images/social/SCQE8H.png">
+<meta name="twitter:url" content="{{ base_url }}/conferences/2025/{{ session.id }}.html">
+<meta name="twitter:title" content="{{ session.title }} - PyData Berlin 2025">
+<meta name="twitter:description" content="{{ session.abstract[:160] }}... By {{ session.speaker_names|join(', ') }}">
+<meta name="twitter:image" content="{{ social_image_url }}">
 <meta name="twitter:site" content="@pydataberlin">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/SCQE8H.html">
+<link rel="canonical" href="{{ base_url }}/conferences/2025/{{ session.id }}.html">
 
 <link rel="stylesheet" href="../../css/main.css" />
 <!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
@@ -138,78 +138,94 @@
 
 <section class="session-header">
     <div class="inner">
-        
-        <span class="track-badge">Computer Vision (incl. Generative AI CV)</span>
-        
-        <h1>Spot the difference: 🕵️ using foundation models to monitor for change with satellite imagery 🛰️</h1>
-        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+        {% if session.track_str %}
+        <span class="track-badge">{{ session.track_str }}</span>
+        {% endif %}
+        <h1>{{ session.title }}</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">{{ session.session_type_str }}</p>
     </div>
 </section>
 
-
+{% if has_session_image %}
 <section class="session-image-section">
     <div class="content-section">
-        <img src="https://berlin.pydata.org/images/social/SCQE8H.png" alt="Spot the difference: 🕵️ using foundation models to monitor for change with satellite imagery 🛰️ - Session Card" class="session-image">
+        <img src="{{ session_image_url }}" alt="{{ session.title }} - Session Card" class="session-image">
     </div>
 </section>
-
+{% endif %}
 
 <section class="wrapper style5">
     <div class="content-section">
         
         <div class="session-info">
-            <span><strong>Level:</strong> Novice</span>
-            
-            <span><strong>Company/Institute:</strong> LiveEO GmbH</span>
-            
-            
-            
+            <span><strong>Level:</strong> {{ session.audience_level }}</span>
+            {% if session.company %}
+            <span><strong>Company/Institute:</strong> {{ session.company }}</span>
+            {% endif %}
+            {% if session.room %}
+            <span><strong>Room:</strong> {{ session.room }}</span>
+            {% endif %}
+            {% if session.start %}
+            <span><strong>Time:</strong> {{ session.start }}</span>
+            {% endif %}
         </div>
 
         <h2>Abstract</h2>
-        <p>Energy infrastructure is vulnerable to damage by erosion or third party interference, which often takes the form of unsanctioned construction. In this talk we discuss our experiences using deep learning algorithms powered by large foundation models to monitor for changes in bi-temporal very-high resolution satellite imagery.</p>
+        <p>{{ session.abstract }}</p>
 
-        
+        {% if session.prerequisites %}
         <h3>Prerequisites</h3>
-        <p>A basic understanding of ML is useful, but not required. No experience with satellite imagery is expected.</p>
-        
+        <p>{{ session.prerequisites }}</p>
+        {% endif %}
 
         <h2>Description</h2>
         <div class="description-content">
-            <p>Oil and gas pipelines are usually buried around 1.5 meters underground, making them vulnerable to human activity or natural processes like erosion. Pipeline operators need to perform regular checks to ensure the integrity of their infrastructure. Very High Resolution (VHR) satellite images, with ground sampling distances of less than 1 meter,  provide an interesting solution to this problem allowing for large scale monitoring and regular revisit rates. </p>
-<p>Spotting changes is far from simple, as one needs to distinguish between relevant changes (such as construction activity), and irrelevant changes, such as shadows, seasonal changes or changes due to viewing angles. </p>
-<p>Geospatial foundation models, trained on vast collections of satellite imagery from across the globe, offer enhanced generalisation capabilities while requiring relatively few labels to achieve powerful performance. This global-scale pretraining enables these models to develop robust feature representations that transfer effectively to new geographic regions and tasks.</p>
+            {{ description_html|safe }}
         </div>
 
-        <h2>Speaker</h2>
-        
+        <h2>Speaker{{ 's' if speakers|length > 1 else '' }}</h2>
+        {% for speaker in speakers %}
         <div class="speaker-card">
-            
+            {% if speaker.picture %}
+            <img src="{{ speaker.picture }}" alt="{{ speaker.name }}" class="speaker-image">
+            {% else %}
             <div class="speaker-image" style="background: #e0e0e0; display: flex; align-items: center; justify-content: center;">
-                <span style="font-size: 3em; color: #999;">F</span>
+                <span style="font-size: 3em; color: #999;">{{ speaker.name[0] }}</span>
             </div>
-            
+            {% endif %}
             <div class="speaker-info">
-                <h3>Ferdinand Schenck</h3>
-                
-                <p><strong>(Staff) Machine Learning Engineer</strong></p>
-                
-                
-                
+                <h3>{{ speaker.name }}</h3>
+                {% if speaker.position %}
+                <p><strong>{{ speaker.position }}</strong></p>
+                {% endif %}
+                {% if speaker.biography %}
+                <p>{{ speaker.biography }}</p>
+                {% endif %}
+                {% if speaker.has_social_links %}
                 <div class="social-links">
-                    
-                    
-                    
-                    
-                    
-                    
-                    <a href="ferdinandschenck.bsky.social" target="_blank" class="icon fa-cloud" title="Bluesky"></a>
-                    
+                    {% if speaker.homepage %}
+                    <a href="{{ speaker.homepage }}" target="_blank" class="icon fa-home" title="Homepage"></a>
+                    {% endif %}
+                    {% if speaker.linkedin %}
+                    <a href="{{ speaker.linkedin }}" target="_blank" class="icon fa-linkedin" title="LinkedIn"></a>
+                    {% endif %}
+                    {% if speaker.github %}
+                    <a href="{{ speaker.github }}" target="_blank" class="icon fa-github" title="GitHub"></a>
+                    {% endif %}
+                    {% if speaker.mastodon %}
+                    <a href="{{ speaker.mastodon }}" target="_blank" class="icon fa-mastodon" title="Mastodon"></a>
+                    {% endif %}
+                    {% if speaker.twitter %}
+                    <a href="{{ speaker.twitter }}" target="_blank" class="icon fa-twitter" title="X/Twitter"></a>
+                    {% endif %}
+                    {% if speaker.bluesky %}
+                    <a href="{{ speaker.bluesky }}" target="_blank" class="icon fa-cloud" title="Bluesky"></a>
+                    {% endif %}
                 </div>
-                
+                {% endif %}
             </div>
         </div>
-        
+        {% endfor %}
 
         <div style="text-align: center; margin-top: 3em;">
             <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
