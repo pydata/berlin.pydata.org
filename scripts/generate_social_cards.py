@@ -1,15 +1,14 @@
 """Generate social media cards using template v2 with upper-right safe zone."""
 
-import json
 import hashlib
-from pathlib import Path
+import json
+import string
 from io import BytesIO
+from pathlib import Path
 
 import requests
-from PIL import Image, ImageDraw, ImageFont
-
 from models import Session, Speaker
-
+from PIL import Image, ImageDraw, ImageFont
 
 CARD_WIDTH = 1200
 CARD_HEIGHT = 630
@@ -73,7 +72,9 @@ class CardGenerator:
                 "title": ImageFont.truetype(font_path, 46),
                 "subtitle": ImageFont.truetype(font_path, 28),
                 "small": ImageFont.truetype(font_path, 24),
-                "event_info": ImageFont.truetype(font_path, 42),  # 50% larger than subtitle
+                "event_info": ImageFont.truetype(
+                    font_path, 42
+                ),  # 50% larger than subtitle
             }
         else:
             # Fallback to default font
@@ -182,52 +183,28 @@ class CardGenerator:
 
         return lines
 
-    def _contains_emojis(self, text: str) -> bool:
-        """Check if text contains any emojis using comprehensive Unicode detection."""
-        import unicodedata
-        
-        for char in text:
-            try:
-                # Get Unicode category and name
-                category = unicodedata.category(char)
-                name = unicodedata.name(char, "")
-                
-                # Check for emoji indicators:
-                # 1. Symbol categories that are often emojis
-                # 2. Unicode names containing emoji keywords
-                # 3. Extended Unicode ranges for emojis
-                code = ord(char)
-                
-                if (
-                    # Symbol categories
-                    category in ('So', 'Sm')  # Symbol other, Symbol math
-                    # Emoji keywords in Unicode names
-                    or any(keyword in name.upper() for keyword in [
-                        'EMOJI', 'FACE', 'HEART', 'SMILE', 'THUMBS', 'HAND',
-                        'FIRE', 'STAR', 'CLAP', 'WAVE', 'POINT', 'MUSCLE'
-                    ])
-                    # Comprehensive emoji Unicode ranges
-                    or 0x1F000 <= code <= 0x1FAFF  # All emoji blocks
-                    or 0x2600 <= code <= 0x27BF    # Miscellaneous symbols
-                    or 0x1F300 <= code <= 0x1F9FF   # Extended emoji ranges
-                    or 0x200D <= code <= 0x200D     # Zero-width joiner (emoji sequences)
-                    or 0xFE0F <= code <= 0xFE0F     # Variation selector-16 (emoji style)
-                ):
-                    return True
-                    
-            except (ValueError, TypeError):
-                # If we can't get Unicode info, check basic ranges
-                code = ord(char)
-                if 0x1F000 <= code <= 0x1FAFF or 0x2600 <= code <= 0x27BF:
-                    return True
-                    
+    def _is_ok(self, char: str) -> bool:
+        """Social card text can only show ascii characters."""
+        if any(
+            [
+                char in string.ascii_letters,
+                char in string.digits,
+                char in string.whitespace,
+                char in string.punctuation,
+            ]
+        ):
+            return True
         return False
+
+    def _clean_text(self, text: str) -> str:
+        """Social card text can only show ascii characters."""
+        return "".join([t for t in text if self._is_ok(t)])
 
     def _hex_to_rgb(self, hex_color: str) -> tuple[int, int, int]:
         """Convert hex color to RGB tuple."""
-        if hex_color.startswith('#'):
+        if hex_color.startswith("#"):
             hex_color = hex_color[1:]
-        return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+        return tuple(int(hex_color[i : i + 2], 16) for i in (0, 2, 4))
 
     def _draw_text_smart(
         self,
@@ -238,6 +215,7 @@ class CardGenerator:
         font: ImageFont.FreeTypeFont,
         fill: tuple | str,
     ) -> None:
+        text = self._clean_text(text)
         """Smart text rendering that handles emojis properly with multiple fallback strategies."""
         # Convert hex color to RGB tuple if needed
         if isinstance(fill, str):
@@ -253,20 +231,28 @@ class CardGenerator:
                 try:
                     # Strategy 3: If emojis cause issues, render text-only version
                     import re
+
                     # Keep only alphanumeric, spaces, and common punctuation
-                    text_only = re.sub(r'[^\w\s\-.,!?:;()[\]{}"\'\\/]', ' ', text)
+                    text_only = re.sub(r'[^\w\s\-.,!?:;()[\]{}"\'\\/]', " ", text)
                     # Clean up multiple spaces
-                    text_only = re.sub(r'\s+', ' ', text_only).strip()
-                    
+                    text_only = re.sub(r"\s+", " ", text_only).strip()
+
                     if text_only:
                         draw.text((x, y), text_only, font=font, fill=fill)
                     else:
                         # If no readable text remains, show placeholder
-                        draw.text((x, y), "[Content with special characters]", font=font, fill=fill)
+                        draw.text(
+                            (x, y),
+                            "[Content with special characters]",
+                            font=font,
+                            fill=fill,
+                        )
                 except Exception:
                     # Strategy 4: Ultimate fallback - ASCII only
                     try:
-                        ascii_text = text.encode('ascii', 'ignore').decode('ascii').strip()
+                        ascii_text = (
+                            text.encode("ascii", "ignore").decode("ascii").strip()
+                        )
                         if ascii_text:
                             draw.text((x, y), ascii_text, font=font, fill=fill)
                         else:
@@ -303,7 +289,9 @@ class CardGenerator:
             if speaker_id in self.speakers:
                 speaker = self.speakers[speaker_id]
                 if speaker.picture:
-                    photo = self._download_speaker_photo(speaker.picture)
+                    photo = self._download_speaker_photo(
+                        f"https://cfp.pydata.org/{speaker.picture}"
+                    )
                     if photo:
                         speaker_photos.append((photo, speaker_id))
 
