@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Building an AI Agent for Natural Language to SQL Query Execution on Live Databases - PyData Berlin 2025</title>
-<meta name="description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes the... By Cainã Max Couto da Silva">
+<meta name="description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, validates an... By Cainã Max Couto da Silva">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://berlin.pydata.org/conferences/2025/GZUXGZ.html">
 <meta property="og:title" content="Building an AI Agent for Natural Language to SQL Query Execution on Live Databases - PyData Berlin 2025">
-<meta property="og:description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes the... By Cainã Max Couto da Silva">
+<meta property="og:description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, validates an... By Cainã Max Couto da Silva">
 <meta property="og:image" content="https://berlin.pydata.org/images/social/GZUXGZ.png">
 <meta property="og:site_name" content="PyData Berlin">
 
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/GZUXGZ.html">
 <meta name="twitter:title" content="Building an AI Agent for Natural Language to SQL Query Execution on Live Databases - PyData Berlin 2025">
-<meta name="twitter:description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes the... By Cainã Max Couto da Silva">
+<meta name="twitter:description" content="This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, validates an... By Cainã Max Couto da Silva">
 <meta name="twitter:image" content="https://berlin.pydata.org/images/social/GZUXGZ.png">
 <meta name="twitter:site" content="@pydataberlin">
 
@@ -163,18 +163,22 @@
             <span><strong>Company/Institute:</strong> UW-Madison</span>
             
             
+            <span><strong>Room:</strong> {'en': 'B09'}</span>
+            
+            
+            <span><strong>Time:</strong> 2025-09-03T08:40:00+00:00</span>
             
         </div>
 
         <h2>Abstract</h2>
-        <p>This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, executes them on live databases, and returns coherent responses. Using the Retrieval-Augmented Generation (RAG) approach with modern LLMs, participants will learn how to construct robust NL2SQL systems that understand database schema, respect database constraints, and generate accurate SQL. By the end of this 4-hour session, attendees will have created a working prototype using the Brazilian E-Commerce dataset that they can adapt to their own data sources.</p>
+        <p>This hands-on tutorial will guide participants through building an end-to-end AI agent that translates natural language questions into SQL queries, validates and executes them on live databases, and returns accurate responses. Participants will build a system that intelligently routes between a specialized SQL agent and a ReAct chat agent, implementing RAG for query similarity matching, comprehensive safety validation, and human-in-the-loop confirmation. By the end of this session, attendees will have created a powerful and extensible system they can adapt to their own data sources.</p>
 
         
         <h3>Prerequisites</h3>
         <p>- Python programming experience
 - Basic understanding of API interactions
 - Basic familiarity with SQL and database management
-- Laptop with [Git](https://git-scm.com/) and [UV](https://github.com/astral-sh/uv), UV, and a Python IDE (I recommend VSCode) installed.
+- Laptop with [Git](https://git-scm.com/) and [UV](https://github.com/astral-sh/uv), and your preferred Python IDE (I recommend VSCode) installed.
 
 No prior experience with LLMs, RAG, or advanced NLP is required.</p>
         
@@ -182,37 +186,42 @@ No prior experience with LLMs, RAG, or advanced NLP is required.</p>
         <h2>Description</h2>
         <div class="description-content">
             <h3>Overview</h3>
-<p>Natural Language to SQL systems enable non-technical users to access database insights. This tutorial bridges the gap between theoretical understanding and practical implementation through a RAG-based approach.</p>
-<p>Participants will build an AI agent that can:<br />
-1. Ingest and understand database schemas<br />
-2. Retrieve relevant context about tables and relationships<br />
-3. Generate accurate SQL from natural language questions<br />
-4. Execute queries safely on live databases<br />
-5. Present results in an understandable format</p>
-<p>We'll use the Kaggle dataset "<a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce">Brazilian E-Commerce dataset by Olist</a>" as our working example, demonstrating how to handle multiple tables with complex relationships. This dataset will be hosted on an EC2 AWS instance for live interaction during the tutorial.</p>
-<p>The tutorial balances theoretical foundations with hands-on practice. Participants will start from a repository with backbone code and implement the key components during the session. By the end, attendees will have a working prototype they can adapt to their own datasets.</p>
+<p>Natural‑language interfaces unlock database insights for non‑technical users. This tutorial provides a practical implementation for building these systems reliably and effectively. </p>
+<p>Participants will build an AI agent system that can:</p>
+<ol>
+<li>Route intelligently between SQL generation and ReAct chat agent workflows</li>
+<li>Ingest and understand database schemas with domain knowledge</li>
+<li>Retrieve relevant context and similar query examples using RAG with vector similarity</li>
+<li>Generate accurate SQL with validation and safety guardrails</li>
+<li>Execute queries safely with human-in-the-loop approval</li>
+<li>Present results in an understandable format</li>
+<li>Track costs and monitor performance using LangSmith</li>
+<li>Manage session-based memory and conversation context</li>
+</ol>
+<p>We'll use the Kaggle dataset "<a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce">Brazilian E-Commerce dataset by Olist</a>" as our working example, demonstrating how to handle multiple tables across two schemas with complex relationships. This dataset will be hosted on an EC2 AWS instance for live interaction during the tutorial.</p>
+<p>This tutorial addresses real-world database complexity with production-grade considerations. Participants will start from a repository with backbone code and implement the key components during the session. By the end, attendees will have a working system they can adapt to their own datasets.</p>
 <h3>Tools and Frameworks</h3>
 <p>This tutorial will leverage modern tools and frameworks for efficient development:</p>
-<p><strong>Development Tools:</strong><br />
-- pyproject.toml for standardized project configuration<br />
-- UV for fast, reliable package management<br />
-- Ruff for comprehensive Python linting and formatting<br />
-- YAML for configuration management</p>
-<p><strong>AI and RAG Frameworks:</strong><br />
-- LangChain's agent framework for orchestration<br />
-- OpenAI models (GPT-4) with examples of alternatives<br />
-- Vector databases (pgvector) for efficient retrieval</p>
-<p><strong>Database Tools:</strong><br />
-- SQLAlchemy for database interactions<br />
-- pandas for data manipulation and analysis<br />
-- PostgreSQL as the database engine for the live dataset</p>
+<p><strong>AI and Agent Frameworks:</strong><br />
+- LangChain for agent components and LLM interactions<br />
+- LangGraph for agent orchestration and workflow management<br />
+- LangSmith for comprehensive cost tracking and monitoring<br />
+- OpenAI models with examples of alternatives</p>
+<p><strong>Database and Vector Store:</strong><br />
+- SQLAlchemy for database interactions and schema retrieval<br />
+- PostgreSQL as the database engine for the live dataset<br />
+- PGVector for similarity-based query retrieval</p>
+<p><strong>Development:</strong><br />
+- YAML for configuration management<br />
+- <code>pyproject.toml</code> for standardized project configuration<br />
+- UV reliable package management and Ruff for code formatting/linting</p>
         </div>
 
         <h2>Speaker</h2>
         
         <div class="speaker-card">
             
-            <img src="https://cfp.pydata.org/media/avatars/uw_profile_picture_Efgp8uf.jpg" alt="Cainã Max Couto da Silva" class="speaker-image">
+            <img src="/media/berlin2025/question_uploads/uw_profile_picture_kRpxaHP.jpg" alt="Cainã Max Couto da Silva" class="speaker-image">
             
             <div class="speaker-info">
                 <h3>Cainã Max Couto da Silva</h3>

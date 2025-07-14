@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beyond Benchmarks: Practical Evaluation Strategies for Compound AI Systems - PyData Berlin 2025</title>
+<meta name="description" content="Evaluating large language models (LLMs) in real-world applications goes far beyond standard benchmarks. When LLMs are embedded in complex pipelines, choosing th... By Iryna Kondrashchenko, Oleh Kostromin">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/YKFWKQ.html">
+<meta property="og:title" content="Beyond Benchmarks: Practical Evaluation Strategies for Compound AI Systems - PyData Berlin 2025">
+<meta property="og:description" content="Evaluating large language models (LLMs) in real-world applications goes far beyond standard benchmarks. When LLMs are embedded in complex pipelines, choosing th... By Iryna Kondrashchenko, Oleh Kostromin">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/social_card_default.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/YKFWKQ.html">
+<meta name="twitter:title" content="Beyond Benchmarks: Practical Evaluation Strategies for Compound AI Systems - PyData Berlin 2025">
+<meta name="twitter:description" content="Evaluating large language models (LLMs) in real-world applications goes far beyond standard benchmarks. When LLMs are embedded in complex pipelines, choosing th... By Iryna Kondrashchenko, Oleh Kostromin">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/social_card_default.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/YKFWKQ.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    .session-image-section {
+        background: #fff;
+        padding: 2em 0;
+    }
+    .session-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+        .session-image-section {
+            padding: 1em 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Natural Language Processing & Audio (incl. Generative AI NLP)</span>
+        
+        <h1>Beyond Benchmarks: Practical Evaluation Strategies for Compound AI Systems</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> DataForce Solutions GmbH</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>Evaluating large language models (LLMs) in real-world applications goes far beyond standard benchmarks. When LLMs are embedded in complex pipelines, choosing the right models, prompts, and parameters becomes an ongoing challenge.
+
+In this talk, we will present a practical, human-in-the-loop evaluation framework that enables systematic improvement of LLM-powered systems based on expert feedback. By combining domain expert insights and automated evaluation methods, it is possible to iteratively refine these systems while building transparency and trust.
+
+This talk will be valuable for anyone who wants to ensure their LLM applications can handle real-world complexity - not just perform well on generic benchmarks.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>The attendees are assumed to have familiarity with LLMs and machine learning workflows but do not require deep NLP expertise.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>As large language models become integral to real-world applications, evaluating and improving their performance is a growing challenge. Generic benchmarks and simple metrics fail to adequately assess domain-specific, multi-step reasoning required by compound AI pipelines like retrieval-augmented generation (RAG), multi-tool agents, or knowledge assistants. Moreover, manual evaluation of every step is infeasible at scale, while fully automated LLM-as-a-judge approaches lack critical domain insights.</p>
+<p>In this talk, we will present a practical evaluation approach to enable continuous improvement of LLM-powered systems. It incorporates the following stages: <br />
+- Automatic tracing (e.g. using <code>MLFlow</code>, <code>Langfuse</code>, etc.): capturing input/output pairs across the pipeline to build an evaluation dataset.<br />
+- Expert feedback collection: working with subject matter experts and user interactions to assess correctness, and identify failure points.<br />
+- Iterative improvement cycle: tuning the components and/or optimizing prompts (using frameworks like <code>DSPy</code>, <code>TextGrad</code>, etc.).<br />
+- Degradation tests: turning feedback into automated evaluation tests - ranging from exact match checks to LLM-as-a-judge assertions (using approaches like <code>DeepEval</code>) - to guard against regressions.<br />
+- Continuous monitoring: using the growing evaluation dataset to validate the system as models, tools, or data sources evolve.</p>
+<p>This framework ensures that LLM applications remain reliable, and aligned with specific business needs over time. </p>
+<p>Target audience: AI practitioners developing and maintaining LLM-based applications.</p>
+<p>Attendees will learn strategies to:<br />
+- Build a human-in-the-loop evaluation process combining expert feedback and automated methods.<br />
+- Turn expert knowledge into automatic tests to guard against regressions.<br />
+- Use iterative improvement cycles to refine LLM pipelines over time.</p>
+<p>The attendees are assumed to have familiarity with LLMs and machine learning workflows but do not require deep NLP expertise.</p>
+        </div>
+
+        <h2>Speakers</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="/media/berlin2025/question_uploads/photo_vVmVLCS.png" alt="Iryna Kondrashchenko" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Iryna Kondrashchenko</h3>
+                
+                
+                <p>Iryna is a data scientist and co-founder of DataForce Solutions GmbH, a company specialized in delivering end-to-end data science and AI services. She contributes to several open-source libraries, and strongly believes that open-source products foster a more inclusive tech industry, equipping individuals and organizations with the necessary tools to innovate and compete.</p>
+                
+                
+            </div>
+        </div>
+        
+        <div class="speaker-card">
+            
+            <div class="speaker-image" style="background: #e0e0e0; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 3em; color: #999;">O</span>
+            </div>
+            
+            <div class="speaker-info">
+                <h3>Oleh Kostromin</h3>
+                
+                
+                <p>I am a Data Scientist primarily focused on Deep Learning and MLOps. In my spare time I contribute to several open-source python libraries.</p>
+                
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

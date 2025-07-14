@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Better docs, happier users: What we learned applying Diataxis to HoloViz libraries - PyData Berlin 2025</title>
+<meta name="description" content="Clear documentation is crucial for the success of open-source libraries, but it’s often hard to get right. In this talk, I’ll share our experience applying the ... By Maxime  Liquet">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/PPAYDV.html">
+<meta property="og:title" content="Better docs, happier users: What we learned applying Diataxis to HoloViz libraries - PyData Berlin 2025">
+<meta property="og:description" content="Clear documentation is crucial for the success of open-source libraries, but it’s often hard to get right. In this talk, I’ll share our experience applying the ... By Maxime  Liquet">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/social_card_default.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/PPAYDV.html">
+<meta name="twitter:title" content="Better docs, happier users: What we learned applying Diataxis to HoloViz libraries - PyData Berlin 2025">
+<meta name="twitter:description" content="Clear documentation is crucial for the success of open-source libraries, but it’s often hard to get right. In this talk, I’ll share our experience applying the ... By Maxime  Liquet">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/social_card_default.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/PPAYDV.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    .session-image-section {
+        background: #fff;
+        padding: 2em 0;
+    }
+    .session-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+        .session-image-section {
+            padding: 1em 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Community & Diversity</span>
+        
+        <h1>Better docs, happier users: What we learned applying Diataxis to HoloViz libraries</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Novice</span>
+            
+            <span><strong>Company/Institute:</strong> Anaconda</span>
+            
+            
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>Clear documentation is crucial for the success of open-source libraries, but it’s often hard to get right. In this talk, I’ll share our experience applying the Diataxis documentation framework to improve two HoloViz ecosystem libraries, hvPlot and Panel. Attendees will come away with practical insights on applying Diataxis and strengthening documentation for their own projects.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>Basic familiarity with writing documentation and open-source projects. No prior knowledge of Diataxis, hvPlot, Panel, or Python is required.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>Good documentation turns users into contributors — but achieving it requires more than good intentions. This talk shares the journey of applying the Diataxis framework to improve two open-source Python libraries from the HoloViz ecosystem: Panel and hvPlot.. We’ll start with a short introduction to Diataxis (its four documentation types: tutorials, how-to guides, explanations, and references), then briefly present the libraries we worked on and their documentation challenges.</p>
+<p>The heart of the talk focuses on practical lessons learned: how we mapped existing content into the Diataxis structure, handled content gaps and redundancies, engaged with the user community, and evolved our approach over time. We’ll also discuss what we would do differently if we started again.</p>
+<p>The goal is to give attendees a realistic, hands-on perspective on adopting Diataxis — including both its benefits and its challenges.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="/media/berlin2025/question_uploads/1572777785992_7oJuAsO.jpg" alt="Maxime  Liquet" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Maxime  Liquet</h3>
+                
+                <p><strong>Software Engineer</strong></p>
+                
+                
+                <p>Software Engineer at Anaconda, maintaining and improving the open-source data viz libraries of the HoloViz ecosystem. Previously a civil engineer specialized in flood risk assessment.</p>
+                
+                
+                <div class="social-links">
+                    
+                    
+                    
+                    
+                    
+                    <a href="https://x.com/MaximeLiquet" target="_blank" class="icon fa-twitter" title="X/Twitter"></a>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

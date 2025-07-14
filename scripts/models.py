@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Optional, Union, Dict, List
+from typing import Optional, Union, List
 
 
 class SessionType(BaseModel):
@@ -19,19 +19,19 @@ class Session(BaseModel):
     description: str = Field(alias="Description")
     speaker_ids: List[str] = Field(alias="Speaker IDs")
     speaker_names: List[str] = Field(alias="Speaker names")
-    room: Optional[str] = Field(alias="Room", default=None)
+    room: Optional[str | dict] = Field(alias="Room", default=None)
     start: Optional[str] = Field(alias="Start", default=None)
     audience_level: str = Field(alias="Expected audience expertise: Domain")
     company: Optional[str] = Field(alias="Company / Institute", default=None)
     prerequisites: Optional[str] = Field(alias="Prerequisites", default=None)
-    
+
     @property
     def session_type_str(self) -> str:
         """Get session type as string."""
         if isinstance(self.session_type, str):
             return self.session_type
         return self.session_type.en
-    
+
     @property
     def track_str(self) -> Optional[str]:
         """Get track as string."""
@@ -55,15 +55,17 @@ class Speaker(BaseModel):
     mastodon: Optional[str] = Field(alias="Mastodon", default=None)
     bluesky: Optional[str] = Field(alias="Bluesky", default=None)
     twitter: Optional[str] = Field(alias="X / Twitter", default=None)
-    
+
     @property
     def has_social_links(self) -> bool:
         """Check if speaker has any social media links."""
-        return any([
-            self.homepage,
-            self.linkedin,
-            self.github,
-            self.mastodon,
-            self.bluesky,
-            self.twitter
-        ])
+        return any(
+            [
+                self.homepage,
+                self.linkedin,
+                self.github,
+                self.mastodon,
+                self.bluesky,
+                self.twitter,
+            ]
+        )
