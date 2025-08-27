@@ -54,12 +54,12 @@ class CardGenerator:
         # nasty bug in pretalx: no pictures sometimes
         # add missing picture links via local file
         # format is {speaker_id: {'file': 'filename.jpg', 'name'': 'speaker name for readability'}}
-        with open("../../_data/berlin2025_speaker_pic_add.json") as f:
-            extra_pics = json.load(f)
-        for speaker_id in extra_pics:
-            speaker_dict[
-                speaker_id
-            ].picture = f"/media/avatars/{extra_pics[speaker_id]['file']}"
+        # with open("../../_data/berlin2025_speaker_pic_add.json") as f:
+        #     extra_pics = json.load(f)
+        # for speaker_id in extra_pics:
+        #     speaker_dict[
+        #         speaker_id
+        #     ].picture = f"/media/avatars/{extra_pics[speaker_id]['file']}"
         return speaker_dict
 
     def _load_fonts(self) -> dict[str, ImageFont.FreeTypeFont]:
