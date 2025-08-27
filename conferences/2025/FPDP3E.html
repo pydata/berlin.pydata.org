@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scaling Python: An End-to-End ML Pipeline for ISS Anomaly Detection with Kubeflow and MLFlow - PyData Berlin 2025</title>
+<meta name="description" content="Building and deploying scalable, reproducible machine learning pipelines can be challenging, especially when working with orchestration tools like Slurm or Kube... By Christian Geier">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/FPDP3E.html">
+<meta property="og:title" content="Scaling Python: An End-to-End ML Pipeline for ISS Anomaly Detection with Kubeflow and MLFlow - PyData Berlin 2025">
+<meta property="og:description" content="Building and deploying scalable, reproducible machine learning pipelines can be challenging, especially when working with orchestration tools like Slurm or Kube... By Christian Geier">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/FPDP3E.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/FPDP3E.html">
+<meta name="twitter:title" content="Scaling Python: An End-to-End ML Pipeline for ISS Anomaly Detection with Kubeflow and MLFlow - PyData Berlin 2025">
+<meta name="twitter:description" content="Building and deploying scalable, reproducible machine learning pipelines can be challenging, especially when working with orchestration tools like Slurm or Kube... By Christian Geier">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/FPDP3E.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/FPDP3E.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    .session-image-section {
+        background: #fff;
+        padding: 2em 0;
+    }
+    .session-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+        .session-image-section {
+            padding: 1em 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Infrastructure - Hardware & Cloud</span>
+        
+        <h1>Scaling Python: An End-to-End ML Pipeline for ISS Anomaly Detection with Kubeflow and MLFlow</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+
+<section class="session-image-section">
+    <div class="content-section">
+        <img src="https://berlin.pydata.org/images/social/FPDP3E.png" alt="Scaling Python: An End-to-End ML Pipeline for ISS Anomaly Detection with Kubeflow and MLFlow - Session Card" class="session-image">
+    </div>
+</section>
+
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> prokube.ai</span>
+            
+            
+            <span><strong>Room:</strong> {'en': 'B07-B08'}</span>
+            
+            
+            <span><strong>Time:</strong> 2025-09-01T15:40:00+02:00</span>
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>Building and deploying scalable, reproducible machine learning pipelines can be challenging, especially when working with orchestration tools like Slurm or Kubernetes. In this talk, we demonstrate how to create an end-to-end ML pipeline for anomaly detection in International Space Station (ISS) telemetry data using only Python code.
+
+We show how Kubeflow Pipelines, MLFlow, and other open-source tools enable the seamless orchestration of critical steps: distributed preprocessing with Dask, hyperparameter optimization with Katib, distributed training with PyTorch Operator, experiment tracking and monitoring with MLFlow, and scalable model serving with KServe. All these steps are integrated into a holistic Kubeflow pipeline.
+
+By leveraging Kubeflow's Python SDK, we simplify the complexities of Kubernetes configurations while achieving scalable, maintainable, and reproducible pipelines. This session provides practical insights, real-world challenges, and best practices, demonstrating how Python-first workflows empower data scientists to focus on machine learning development rather than infrastructure.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>Some basic understanding of containerization and workflow orchestration tools is needed as well as some understanding of ML workflows and techniques.</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>Among popular open-source MLOps tools, <strong>Kubeflow</strong> stands out as a Kubernetes-native platform designed to support the entire ML lifecycle, from data preprocessing to model training, deployment, and retraining. Its modular structure enables the integration of a wide range of tools, making it a highly versatile framework for building scalable and reproducible ML workflows. Despite this, most existing resources focus on individual components rather than demonstrating how these can be orchestrated into a seamless, end-to-end pipeline.</p>
+<p>In this talk, we present a practical case study that highlights the potential of Kubeflow in a real-world application. Specifically, we showcase how an automated ML pipeline for anomaly detection in International Space Station (ISS) telemetry data can be built and deployed using Kubeflow and other open-source MLOps tools. The dataset, originating from the Columbus module of the ISS, introduces unique challenges due to its complexity and high-dimensional nature, providing an excellent testbed for MLOps workflows.</p>
+<h3><strong>What makes this approach unique?</strong></h3>
+<p>Our workflow is built entirely in Python, leveraging Kubeflow’s Python SDK to orchestrate every stage of the pipeline. This eliminates the need for manual interaction with Kubernetes or container configurations, making the process accessible to ML engineers and data scientists without extensive DevOps expertise.</p>
+<h3><strong>Key takeaways for attendees:</strong></h3>
+<ul>
+<li><strong>Tool integration:</strong> Learn how to combine Dask for distributed preprocessing, Katib for hyperparameter optimization, PyTorch Operator for distributed training, MLFlow for experiment tracking and monitoring, and KServe for scalable model serving. These tools are orchestrated into a unified pipeline using Kubeflow Pipelines.</li>
+<li><strong>Overcoming challenges:</strong> Gain insights into the technical hurdles faced during the implementation of this pipeline and discover the strategies and best practices that made it possible.</li>
+<li><strong>Real-world impact:</strong> Understand how to apply MLOps principles to complex, real-world datasets and how these principles translate into scalable, maintainable, and reproducible workflows.</li>
+</ul>
+<p>To ensure reproducibility and accessibility, the entire pipeline, including configurations and code, is publicly available in our GitHub repository <a href="https://github.com/hsteude/code-ml4cps-paper">here</a>. Attendees will be able to replicate the workflow, adapt it to their own use cases, or extend it with additional features.</p>
+<h3><strong>Who should attend?</strong></h3>
+<p>This session is designed for data scientists, ML engineers, and Python enthusiasts who want to simplify the development of scalable ML pipelines. Whether you're new to Kubernetes or looking to streamline your MLOps workflows, this talk will provide actionable insights and tools to help you succeed.</p>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <div class="speaker-image" style="background: #e0e0e0; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 3em; color: #999;">C</span>
+            </div>
+            
+            <div class="speaker-info">
+                <h3>Christian Geier</h3>
+                
+                <p><strong>Managing Director</strong></p>
+                
+                
+                <p>Christian has 12+ years of experience in the scientific application of python in academic and industry settings. He is one of the founders of prokube.ai where he builds an MLOps platform build around Kubeflow, MLFlow, Kubernetes, and a host of other open source tools. He also holds a PhD in physics, where he gained experiences in maintaining a distributed compute clusters. Christian is a maintainer of several OSS projects.</p>
+                
+                
+                <div class="social-links">
+                    
+                    <a href="https://prokube.ai" target="_blank" class="icon fa-home" title="Homepage"></a>
+                    
+                    
+                    
+                    <a href="https://github.com/geier" target="_blank" class="icon fa-github" title="GitHub"></a>
+                    
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

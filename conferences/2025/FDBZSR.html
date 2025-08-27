@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>When Postgres is enough: solving document storage, pub/sub and distributed queues without more tools - PyData Berlin 2025</title>
+<meta name="description" content="When a new requirement appears, whether it's document storage, pub/sub messaging, distributed queues, or even full-text search, Postgres can often handle it wit... By Eugen Geist">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://berlin.pydata.org/conferences/2025/FDBZSR.html">
+<meta property="og:title" content="When Postgres is enough: solving document storage, pub/sub and distributed queues without more tools - PyData Berlin 2025">
+<meta property="og:description" content="When a new requirement appears, whether it's document storage, pub/sub messaging, distributed queues, or even full-text search, Postgres can often handle it wit... By Eugen Geist">
+<meta property="og:image" content="https://berlin.pydata.org/images/social/FDBZSR.png">
+<meta property="og:site_name" content="PyData Berlin">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://berlin.pydata.org/conferences/2025/FDBZSR.html">
+<meta name="twitter:title" content="When Postgres is enough: solving document storage, pub/sub and distributed queues without more tools - PyData Berlin 2025">
+<meta name="twitter:description" content="When a new requirement appears, whether it's document storage, pub/sub messaging, distributed queues, or even full-text search, Postgres can often handle it wit... By Eugen Geist">
+<meta name="twitter:image" content="https://berlin.pydata.org/images/social/FDBZSR.png">
+<meta name="twitter:site" content="@pydataberlin">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://berlin.pydata.org/conferences/2025/FDBZSR.html">
+
+<link rel="stylesheet" href="../../css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="../../css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="../../css/ie9.css" /><![endif]-->
+<style>
+    .session-header {
+        background: linear-gradient(to bottom, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 4em 0 2em 0;
+        text-align: center;
+        color: white;
+    }
+    .session-info {
+        background: #f5f5f5;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+    }
+    .session-info span {
+        display: inline-block;
+        margin-right: 2em;
+        font-weight: 600;
+    }
+    .speaker-card {
+        background: #f9f9f9;
+        padding: 2em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        gap: 2em;
+    }
+    .speaker-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .speaker-info {
+        flex-grow: 1;
+    }
+    .social-links {
+        margin-top: 1em;
+    }
+    .social-links a {
+        margin-right: 1em;
+        color: #4a4e69;
+    }
+    .track-badge {
+        display: inline-block;
+        background: #4a4e69;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    .session-image-section {
+        background: #fff;
+        padding: 2em 0;
+    }
+    .session-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media screen and (max-width: 736px) {
+        .speaker-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .speaker-image {
+            margin: 0 auto;
+        }
+        .session-image-section {
+            padding: 1em 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+<header id="header">
+<h1><a href="../../index.html">PyData Berlin</a></h1>
+<nav id="nav">
+<ul>
+<li class="special">
+<a href="#menu" class="menuToggle"><span>Menu</span></a>
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../code-of-conduct/en">Code of Conduct</a></li>
+<li><a href="https://pydata.org/berlin2025/">PyData Berlin 2025</a></li>
+<li><a href="../../blog/">Posts</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="session-header">
+    <div class="inner">
+        
+        <span class="track-badge">Data Handling & Engineering</span>
+        
+        <h1>When Postgres is enough: solving document storage, pub/sub and distributed queues without more tools</h1>
+        <p style="font-size: 1.2em; margin-top: 1em;">Talk</p>
+    </div>
+</section>
+
+
+<section class="session-image-section">
+    <div class="content-section">
+        <img src="https://berlin.pydata.org/images/social/FDBZSR.png" alt="When Postgres is enough: solving document storage, pub/sub and distributed queues without more tools - Session Card" class="session-image">
+    </div>
+</section>
+
+
+<section class="wrapper style5">
+    <div class="content-section">
+        
+        <div class="session-info">
+            <span><strong>Level:</strong> Intermediate</span>
+            
+            <span><strong>Company/Institute:</strong> Freelancer</span>
+            
+            
+            <span><strong>Room:</strong> {'en': 'B05-B06'}</span>
+            
+            
+            <span><strong>Time:</strong> 2025-09-03T13:40:00+02:00</span>
+            
+        </div>
+
+        <h2>Abstract</h2>
+        <p>When a new requirement appears, whether it's document storage, pub/sub messaging, distributed queues, or even full-text search, Postgres can often handle it without introducing more infrastructure.
+
+This talk explores how to leverage Postgres' native features like JSONB, LISTEN/NOTIFY, full-text search, and queueing patterns to build robust, scalable systems without increasing infrastructure complexity. 
+
+You'll learn practical patterns that extend Postgres just far enough, keeping systems simpler, more maintainable, and easier to operate, especially in small to medium projects or freelancing setups, where Postgres often already forms a critical part of the stack.
+
+Postgres might not replace everything forever - but it can often get you much further than you think.</p>
+
+        
+        <h3>Prerequisites</h3>
+        <p>- Knowledge of SQL
+- Knowledge of Python
+- Basic knowledge about Postgres</p>
+        
+
+        <h2>Description</h2>
+        <div class="description-content">
+            <p>When building modern systems, it's easy to reach for specialized tools as new requirements pop up: a document store like MongoDB for flexible schemas, Kafka for pub/sub, Redis for distributed queuing, or Elasticsearch for full-text search.</p>
+<p>But what if you could meet many of these needs by simply extending the Postgres database you likely already have?</p>
+<p>In this talk, we’ll explore how Postgres' powerful native features - such as JSONB for document storage, LISTEN/NOTIFY for pub/sub messaging, SELECT FOR UPDATE SKIP LOCKED for queueing, and its built-in full-text search - can be used to solve real-world problems without introducing new infrastructure.</p>
+<p>Throughout the talk, we’ll walk through practical code examples in Python and SQL to show exactly how these patterns can be implemented in real projects.</p>
+<p>The goal isn’t to suggest that Postgres replaces purpose-built tools like Kafka, Redis, or MongoDB forever. Specialized systems still have their place, especially at larger scales. However, by reusing Postgres intelligently, you can delay these decisions until they are truly necessary - keeping your system simpler, easier to operate, and more maintainable in the meantime.</p>
+<p>Especially for freelancers, startups, and small teams, reducing system complexity early on means faster iteration, fewer operational headaches, and lower costs. And since Postgres is already present in most modern tech stacks, these capabilities are often just a few SQL queries away.</p>
+<h2>Outline</h2>
+<ol>
+<li><strong>Introduction</strong>: re-using existing infrastructure instead of introducing new systems to focus on solving problems</li>
+<li><strong>Pub/Sub with Postgres</strong>: messaging between services using LISTEN/NOTIFY</li>
+<li><strong>Queuing with Postgres</strong>: building distributed job queues with SELECT FOR UPDATE SKIP LOCKED</li>
+<li><strong>Document Storage with Postgres</strong>: handling flexible schemas and semi-structured data using JSONB</li>
+<li><strong>Conclusion</strong>: when re-using Postgres makes sense - and when specialized systems are needed<br />
+<strong>Bonus: full-Text Search with Postgres</strong>: adding efficient search functionality without an external search engine</li>
+</ol>
+        </div>
+
+        <h2>Speaker</h2>
+        
+        <div class="speaker-card">
+            
+            <img src="/media/berlin2025/question_uploads/IMG_2915-1_square_1000_1000_bYmylh9.jpg" alt="Eugen Geist" class="speaker-image">
+            
+            <div class="speaker-info">
+                <h3>Eugen Geist</h3>
+                
+                <p><strong>Software | Data Engineer</strong></p>
+                
+                
+                <p>Seasoned Software & Data Engineering Professional with extensive experience in high-frequency trading systems, data warehousing, and cloud solutions. Expert in optimizing mission-critical systems and implementing engineering best practices. Specialized in Python, SQL and cloud technologies.
+
+Currently working as a Freelance Developer focusing on software and data engineering.
+
+Skilled in developing distributed systems, data pipelines, and performance optimization, consistently delivering solutions that maximize business value.</p>
+                
+                
+                <div class="social-links">
+                    
+                    <a href="https://www.eugengeist.com" target="_blank" class="icon fa-home" title="Homepage"></a>
+                    
+                    
+                    <a href="https://www.linkedin.com/in/eugen-geist/" target="_blank" class="icon fa-linkedin" title="LinkedIn"></a>
+                    
+                    
+                    <a href="https://github.com/e-geist" target="_blank" class="icon fa-github" title="GitHub"></a>
+                    
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 3em;">
+            <a href="https://pydata.org/berlin2025/" class="button special">View Full Conference Program</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://twitter.com/pydataberlin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/pydataberlin" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; PyData Berlin</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery.scrollex.min.js"></script>
+<script src="../../js/jquery.scrolly.min.js"></script>
+<script src="../../js/skel.min.js"></script>
+<script src="../../js/util.js"></script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>
